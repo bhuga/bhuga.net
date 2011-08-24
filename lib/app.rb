@@ -30,6 +30,8 @@ class Bhuga < Sinatra::Application
 
   # keep publishing at some legacy drupal URLs, too.
   get '/:year/:month/:slug' do
+    # note that we do not care about legacy URLs enough to only respond on the correct one...
+    call env.merge("PATH_INFO" => '/' + params[:slug])
   end
 
   get '/:slug' do
