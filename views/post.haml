@@ -1,0 +1,12 @@
+.grid_7.alpha.push_2
+  %h2 #{@post.title}
+  #post-body
+    :preserve
+      #{@post.body}
+  #disqus_thread
+    %noscript
+      %a{ :href => "http://bhuga.disqus.com/?url=http%3A%2F%2Fbhuga.net/#{@post.disqus_identifier}"} View the discussion thread.
+    :javascript
+      var disqus_title = "#{@post.title}";
+      var disqus_identifier = "#{@post.disqus_identifier}"
+    %script{ :type => 'text/javascript', :src => 'http://disqus.com/forums/bhuga/embed.js'}

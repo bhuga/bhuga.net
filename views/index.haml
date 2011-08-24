@@ -1,0 +1,16 @@
+#blogs.grid_5.alpha
+  %h3 Blog Posts
+  %ul
+    - @blog_posts.each do |post|
+      %li.index-post
+        #post-title
+          %a.vibrate{:href => "/#{post.slug}"} #{post.title}
+#reviews.grid_5.omega
+  %h3 Book Reviews
+  %ul
+    - @book_reviews.each do |post|
+      %li.index-post.vibrate
+        #post-title
+          %a{:href => "/#{post.slug}"} #{post.title}
+          %br
+          %span.author by #{post.author}

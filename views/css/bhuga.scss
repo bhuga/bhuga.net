@@ -1,0 +1,94 @@
+body {
+  background-color: #c2ffc2;
+  background-image: url('/images/leather_1_op4.png');
+  margin: 0px;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+
+  h3 {
+    font-family: '26Regular';
+  }
+ 
+  a {
+    color:#660000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:visited {
+    color: #664444;
+  }
+
+  #brown-background {
+    background-image: url('/images/wide-brown.png');
+    width: 1060px;
+    margin: 0 auto;
+    text-align: left;
+    min-height: 100%;
+  }
+
+  #site-name {
+    font-family: '26Regular';
+    h1 {
+      font-size: 80px;
+      margin-bottom: 15px;
+    }
+    span#tagline {
+      font-size: 20px;
+    }
+  }
+
+  #profile-pic {
+    padding-top: 30px;
+  }
+
+  .tiny {
+    font-size: 80%;
+  }
+
+  .framed {
+    padding:1px;
+    border:1px solid #021a40;
+    background-color:#22c122;
+  }
+
+  .vibrate {
+  //  padding: 0px;
+  //  margin: 18px;
+  //  width: 325px;
+    display:block;
+  //  border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  //a.vibrate {
+  //  width: 325px;
+  //  display: block;
+  //}
+
+  // an invisible border fixes some artifacts of the jquery vibrate plugin. poor IE users.
+//  .index-post {
+ //   border: 1px solid rgba(0, 0, 0, 0);
+//    min-height: 50px;
+//  }
+
+  .author {
+    font-size: 80%;
+    margin-left: 15px;
+  }
+
+  .dsq-comment-header-meta-wrapper {
+    font-family: '26Regular';
+  }
+}
+
+@font-face {
+    font-family: '26Regular';
+    src: url('/fonts/jurassic-webfont.eot');
+    src: url('/fonts/jurassic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/jurassic-webfont.woff') format('woff'),
+         url('/fonts/jurassic-webfont.ttf') format('truetype'),
+         url('/fonts/jurassic-webfont.svg#26Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
