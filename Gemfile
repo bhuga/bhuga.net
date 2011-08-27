@@ -5,5 +5,6 @@ gem 'haml'
 gem 'rdiscount'
 gem 'sass'
 gem 'coffee-script'
+gem 'builder'
 
 
