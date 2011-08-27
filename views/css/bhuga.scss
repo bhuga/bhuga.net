@@ -5,7 +5,19 @@ body {
   text-align: center;
   font-family: Tahoma, sans-serif;
 
-  h3 {
+  ul#navbar {
+    padding-left: 0px;
+    font-size: 150%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    li {
+      padding-right: 20px;
+      padding-left: 20px;
+      display: inline;
+    }
+  }
+
+  h3, h2, button.dsq-button-small, button.dsq-button span, a#dsq-like-thread-button span.dsq-toolbar-label, .dinosaur {
     font-family: '26Regular';
   }
  
@@ -29,9 +41,11 @@ body {
 
   #site-name {
     font-family: '26Regular';
+    text-align: center;
     h1 {
       font-size: 80px;
       margin-bottom: 15px;
+      margin-top: 15px;
     }
     span#tagline {
       font-size: 20px;
@@ -39,9 +53,39 @@ body {
   }
 
   #profile-pic {
-    padding-top: 30px;
+    padding-top: 15px;
   }
 
+  #where-am-i {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .snetwork-box {
+    margin-top: 8px;
+    border: 1px solid #660000;
+    border-radius: 3px;
+    .description {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  #github {
+    background-color: #f8f8f8;
+  }
+
+  #twitter {
+    background-color: #e0eef5;
+  }
+
+  #facebook {
+    color: #ffffff;
+    background-color: #3B5998;
+  }
   .tiny {
     font-size: 80%;
   }
@@ -54,22 +98,8 @@ body {
 
   .vibrate {
     padding: 3px;
-  //  margin: 18px;
-  //  width: 325px;
     display:block;
-  //  border: 1px solid rgba(0, 0, 0, 0);
   }
-
-  //a.vibrate {
-  //  width: 325px;
-  //  display: block;
-  //}
-
-  // an invisible border fixes some artifacts of the jquery vibrate plugin. poor IE users.
-//  .index-post {
- //   border: 1px solid rgba(0, 0, 0, 0);
-//    min-height: 50px;
-//  }
 
   .author {
     font-size: 80%;
@@ -78,6 +108,23 @@ body {
 
   .dsq-comment-header-meta-wrapper {
     font-family: '26Regular';
+  }
+
+  #post-body {
+    font-size: 120%;
+  }
+
+  pre {
+    border: solid #380000 4px;
+    background-color: #fcf7ec;
+    overflow: auto;
+    margin-left: 15px;
+    code {
+    }
+  }
+
+  #sidebar {
+    padding-top: 20px;
   }
 }
 

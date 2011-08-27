@@ -14,11 +14,21 @@
         #container.container_12
           #header.grid_12
             #site-name.grid_10.alpha
+              %ul#navbar
+                %li 
+                  %a{:href => '/about' } about
+                %li
+                  %a{:href => '/projects'} projects
+                %li
+                  %a{:href => '/blog'} blog
+                %li
+                  %a{:href => '/books'} books
               %h1 
                 %a{:href => '/' } BHUGA WOOGA!
               %span#tagline Caveman Computing and whatever else I think of
             .grid_2.omega
               #profile-pic
+                %span#where-am-i.dinosaur Where am i?
                 %img.framed{:src => '/images/camel.jpg', :alt => 'Ben and a Camel'}
                 %span.tiny
                   Oh my god, at least one of them can open doors!
@@ -27,5 +37,53 @@
             #content.alpha.grid_10
               = yield
             #sidebar.grid_2.omega
-              You've found the homepage of Ben Lavender, intrepid technology explorer, and this is what he considers his "professional image".
+              You've reached the homepage of Ben Lavender, who thinks that
+              programming can be 
+              %strong fun,
+              and proves it with 
+              %strong dinosaurs.
+              This is what he considers a professional image. Perhaps he's
+              better off doing backend work.
+              %br
+              %br
+              While most mammals are still just sharing pictures, Ben is
+              freaking
+              %strong Social Networking
+              over here. Get with the program.
+              Please choose an appropriate venue to contact him from the fine
+              selection below.
+              #github.snetwork-box.tiny
+                .description
+                  See Ben's
+                  %strong code
+                  on
+                  %strong Github,
+                  report bugs, and make
+                  %strong snotty comments
+                  about his choice of
+                  %strong stylistic dogma.
+                %a{:href => 'http://github.com/bhuga'}
+                  %img{:src => '/images/octocat.png'}
+              #twitter.snetwork-box.tiny
+                .description
+                  Follow Ben on
+                  %strong Twitter,
+                  where you can hear him
+                  %strong complain
+                  about services that he will 
+                  %strong purchase anyway.
+                %a{:href => 'http://twitter.com/bhuga'}
+                  %img{:src => '/images/twitter-bird.png'}
+              #facebook.snetwork-box.tiny
+                .description
+                  Ben is on
+                  %strong Facebook,
+                  but it's off-limits to work stuff.
+                  %strong Dinosaurs 
+                  are fine, though.
+                %a{:href => 'http://facebook.com/blavender'}
+                  %img{:src => '/images/f_logo_transparent.png'}
+
+
+
           #clearer.clear

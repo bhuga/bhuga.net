@@ -57,14 +57,14 @@ class ImageExplosion
       'left': clone.targetX,
       'top': clone.targetY
     throwTime = @randBetween(@options.minThrow, @options.maxThrow)
-    interval = setInterval(@rotate, 15, clone, @options.rotateSpeed)
+    interval = setInterval(@rotate, 15, clone, @options)
     clone.animate target, throwTime, ->
       clone.fadeOut 400, ->
         clone.remove()
       clearInterval interval
 
-  rotate: (what, howMuch) ->
-    r = what.r = what.r + howMuch
+  rotate: (what, options) ->
+    r = what.r = what.r + options.rotateSpeed
     what.css('rotation', r + 'deg')
     what.css('-webkit-transform', 'rotate(' + r + 'deg)')
     what.css('-moz-transform', 'rotate(' + r + 'deg)')

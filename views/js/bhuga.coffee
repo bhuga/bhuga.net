@@ -30,10 +30,22 @@ $ ->
                           }
 
   $('a').click ->
-    # cache href
+    # cache href or its gone in the closure later
     href = this.href
     setTimeout ->
-      console.log('time to move pages!')
-      # window.location.href = href
+      window.location.href = href
     , 1000
     this.href = null
+
+  disqus_loaded_callback = ->
+    console.log "disqus is all done loading!"
+    $('span.dsq-comment-footer-reply button').html('ARGUE!')
+    $('span.dsq-like button').html('AWESOME!')
+    $('button.dsq-button span').html('POST AS...')
+    $('a#dsq-like-thread-button span.dsq-toolbar-label').html('THIS IS AWESOME!')
+
+  disqus_loaded = setInterval ->
+    if $('#dsq-comments-title').get(0)
+      clearInterval disqus_loaded
+      disqus_loaded_callback()
+  , 100
