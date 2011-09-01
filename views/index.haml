@@ -5,12 +5,10 @@
       %li.index-post
         #post-title
           %a.vibrate{:href => "/#{post.slug}"} #{post.title}
-#reviews.grid_5.omega
+#reviews.grid_4.omega
   %h3 Book Reviews
   %ul
     - @book_reviews.each do |post|
-      %li.index-post.vibrate
-        #post-title
-          %a{:href => "/#{post.slug}"} #{post.title}
-          %br
-          %span.author by #{post.author}
+      %li.index-post
+        %a.vibrate{:href => "/#{post.slug}"} #{post.title}
+        %span.author by #{post.author}

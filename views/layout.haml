@@ -12,8 +12,8 @@
     #main
       #brown-background
         #container.container_12
-          #header.grid_12
-            #site-name.grid_10.alpha
+          #header.grid_9
+            #site-name.grid_12.alpha.omega
               %ul#navbar
                 %li 
                   %a{:href => '/about' } about
@@ -23,67 +23,79 @@
                   %a{:href => '/blog'} blog
                 %li
                   %a{:href => '/books'} books
-              %h1 
+              %h1.bigtitle
                 %a{:href => '/' } BHUGA WOOGA!
-              %span#tagline Caveman Computing and whatever else I think of
-            .grid_2.omega
-              #profile-pic
-                %span#where-am-i.dinosaur Where am i?
-                %img.framed{:src => '/images/camel.jpg', :alt => 'Ben and a Camel'}
-                %span.tiny
-                  Oh my god, at least one of them can open doors!
-          #clearer.clear
-          #content-grid.grid_12
-            #content.alpha.grid_10
+          #hello-and-content.grid_10.alpha
+            #dinosaur-hello
+              -#%img#talking-trex{:src => '/images/trexhead.png'}
+              %img#talking-raptor{:src => '/images/raptor.png'}
+              #message.triangle-right.right
+                Hi there! You've reached the homepage of
+                %strong Ben Lavender,
+                who thinks that programming can be 
+                %strong fun,
+                and proves it with 
+                %strong dinosaurs.
+                This site is how he likes to present himself, and shows that just because someone
+                %strong can
+                do something is not evidence that they
+                %strong should.
+                And that's what dinosaur cloning and front-end web development have in common.
+                Enjoy your stay.
+            %hr
+            #content-grid.push_1
               = yield
-            #sidebar.grid_2.omega
-              You've reached the homepage of Ben Lavender, who thinks that
-              programming can be 
-              %strong fun,
-              and proves it with 
-              %strong dinosaurs.
-              This is what he considers a professional image. Perhaps he's
-              better off doing backend work.
-              %br
-              %br
-              While most mammals are still just sharing pictures, Ben is
-              freaking
-              %strong Social Networking
-              over here. Get with the program.
-              Please choose an appropriate venue to contact him from the fine
-              selection below.
-              #github.snetwork-box.tiny
-                .description
-                  See Ben's
-                  %strong code
-                  on
-                  %strong Github,
-                  report bugs, and make
-                  %strong snotty comments
-                  about his choice of
-                  %strong stylistic dogma.
-                %a{:href => 'http://github.com/bhuga'}
-                  %img{:src => '/images/octocat.png'}
-              #twitter.snetwork-box.tiny
-                .description
-                  Follow Ben on
-                  %strong Twitter,
-                  where you can hear him
-                  %strong complain
-                  about services that he will 
-                  %strong purchase anyway.
-                %a{:href => 'http://twitter.com/bhuga'}
-                  %img{:src => '/images/twitter-bird.png'}
-              #facebook.snetwork-box.tiny
-                .description
-                  Ben is on
-                  %strong Facebook,
-                  but it's off-limits to work stuff.
-                  %strong Dinosaurs 
-                  are fine, though.
-                %a{:href => 'http://facebook.com/blavender'}
-                  %img{:src => '/images/f_logo_transparent.png'}
-
-
-
+          #sidebar.grid_2.omega.smaller
+            #profile-pic
+              %span#where-am-i.dinosaur This site's amazing! How do I tell the author that?
+              %img.framed{:src => '/images/camel.jpg', :alt => 'Ben and a Camel'}
+              %span.tiny
+                Camels smell freaking terrible, it's how they avoid raptors. I'm no hater in any case.
+            %br
+            While most mammals are still just sharing pictures, Ben is
+            freaking
+            %strong Social Networking
+            over here. Get with the program.
+            Please choose an appropriate venue to contact him from the fine
+            selection below.
+            #github.snetwork-box
+              .description
+                See Ben's
+                %strong code
+                on
+                %strong Github,
+                report 
+                %strong bugs, 
+                and make
+                %strong snotty comments
+                about his choice of
+                %strong stylistic dogma.
+              %a{:href => 'http://github.com/bhuga'}
+                %img{:src => '/images/octocat.png'}
+            #twitter.snetwork-box
+              .description
+                Follow Ben on
+                %strong Twitter,
+                where you can hear him
+                %strong complain
+                about products and services that he will usually
+                %strong purchase anyway.
+              %a{:href => 'http://twitter.com/bhuga'}
+                %img{:src => '/images/twitter-bird.png'}
+            #facebook.snetwork-box
+              .description
+                Ben is on
+                %strong Facebook,
+                and feel free to contact him there if your inquiry is likely involves
+                %strong drinking.
+                %strong Dinosaur inquiries
+                are fine, too.
+              %a{:href => 'http://facebook.com/blavender'}
+                %img{:src => '/images/f_logo_transparent.png'}
           #clearer.clear
+          #footer
+            I don't believe in copyright. Copy my stuff and attribute it to your cat. I don't care.
+            %br
+            Even so, I made
+            %a{:href => '/acknowledgements'} page of acknowledgements
+            because I used so many others' work to build this.

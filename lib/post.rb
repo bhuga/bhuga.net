@@ -43,6 +43,10 @@ class Post
   def method_missing(method, *args)
     meta.has_key?(method) ? meta[method] : super
   end
+
+  def created
+    Time.at(@meta[:date].to_i).strftime('%b %d, %Y')
+  end
 end
 
 class BookReview < Post

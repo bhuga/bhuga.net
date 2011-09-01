@@ -5,6 +5,58 @@ body {
   text-align: center;
   font-family: Tahoma, sans-serif;
 
+  #dinosaur-hello {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    #message {
+      background-color: #fefee5;
+      font-size: 16px;
+      width: 550px;
+      margin-left:30px;
+    }
+    #talking-raptor {
+      float: right;
+      height: 190px;
+      width: 120px;
+      padding-left:40px;
+    }
+
+    .triangle-right {
+        position:relative;
+        padding:15px;
+        margin:1em 0 3em;
+        /* css3 */
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        border-radius:10px;
+    }
+    .triangle-right.right {
+        margin-right:40px;
+    }
+    .triangle-right:after {
+        content:"";
+        position:absolute;
+        bottom:-20px; /* value = - border-top-width - border-bottom-width */
+        left:50px; /* controls horizontal position */
+        border-width:20px 0 0 20px; /* vary these values to change the angle of the vertex */
+        border-style:solid;
+        border-color:#fefee5 transparent; 
+        /* reduce the damage in FF3.0 */
+        display:block; 
+        width:0;
+    }
+    .triangle-right.right:after {
+        top:40%;
+        right:-40px; /* value = - border-left-width - border-right-width */
+        bottom:auto;
+        left:auto;
+        border-width:15px 0 0 40px; /* vary these values to change the angle of the vertex */
+        border-color:transparent #fefee5; 
+    }
+        
+    
+  }
+
   ul#navbar {
     padding-left: 0px;
     font-size: 150%;
@@ -43,9 +95,9 @@ body {
     font-family: '26Regular';
     text-align: center;
     h1 {
-      font-size: 80px;
+      font-size: 95px;
       margin-bottom: 15px;
-      margin-top: 15px;
+      margin-top: 40px;
     }
     span#tagline {
       font-size: 20px;
@@ -59,6 +111,7 @@ body {
   #where-am-i {
     padding-top: 8px;
     padding-bottom: 8px;
+    font-size: 120%;
   }
 
   .snetwork-box {
@@ -87,10 +140,15 @@ body {
     background-color: #3B5998;
   }
   .tiny {
+    font-size: 60%;
+  }
+
+  .smaller {
     font-size: 80%;
   }
 
   .framed {
+    width: 100%;
     padding:1px;
     border:1px solid #021a40;
     background-color:#22c122;
@@ -123,8 +181,19 @@ body {
     }
   }
 
+  .post-date {
+    color: #444444;
+  }
+
   #sidebar {
     padding-top: 20px;
+  }
+
+  #footer {
+    text-align: center;
+    font-size: 80%;
+    margin-top: 45px;
+    padding-bottom: 15px;
   }
 }
 
