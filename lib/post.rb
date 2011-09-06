@@ -40,6 +40,10 @@ class Post
     @meta.has_key?(:drupal_id) ? "node/#{@meta[:drupal_id]}" : @meta[:slug]
   end
 
+  def first_paragraph
+    body.split(/<\/p>/).first
+  end
+
   def method_missing(method, *args)
     meta.has_key?(method) ? meta[method] : super
   end
