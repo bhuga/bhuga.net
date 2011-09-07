@@ -1,0 +1,17 @@
+--- 
+:drupal_id: 61
+:date: 1271253438
+:type: book_review
+:title: The Watchmen
+:format_id: 1
+:format: Filtered HTML
+:slug: 2010/04/watchmen
+:author: Alan Moore and Dave Gibbons
+---
+My first reviewed graphic novel, read during an internet outage as it was on the coffee table.  It was alright, but I have to say that I rather liked the movie better.
+
+While it seems fitting that comic books about comic-book-style heroes should be comics, I also have to say that I just don't really enjoy the format anymore.  The art is a style all its own, but its not amazing--I don't think it adds very much to the story, over time, and especially not much to this story, which is a bit more about the lives of the heroes involved than the actual heroic acts.
+
+It seems to me that most comic book art is about getting a dramatic view of the scene, or to show a scene from a particular characters point of view:  the pane is the back wall of Rosarch's cell, for example, and thus we kind of get a point of view from Rosarch inside the cell.  But the art is usually half-covered by dialogue, especially in a story like this, and it's only giving you a base feel and not detailed enough to really set a mood like a movie can.  I guess I just prefer the format.
+
+That all being said, its a good story with some good moral questions.  Is it okay to nuke New York to save the world?  I don't know that the story treats the question very deeply, and for the actual morality of the issue I'd prefer to read some cognitive psych.  But it's a fun romp with some real meat to it and that's hard to do, so I still liked it.  Certainly, it's far better than the comics that were around when I was in the 8th grade.
