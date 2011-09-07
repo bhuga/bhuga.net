@@ -18,14 +18,6 @@ $ ->
     $(event.currentTarget).explode($.extend(utahraptor, { centerOn:event.currentTarget }))
     $(event.currentTarget).explode($.extend(triceratops, { centerOn:event.currentTarget }))
 
-  $('a').click ->
-    # cache href or its gone in the closure later
-    href = this.href
-    setTimeout ->
-      window.location.href = href
-    , 1000
-    this.href = null
-
   disqus_loaded_callback = ->
     console.log "disqus is all done loading!"
     $('span.dsq-comment-footer-reply button').html('ARGUE!')
