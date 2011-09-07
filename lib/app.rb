@@ -65,10 +65,8 @@ class Bhuga < Sinatra::Application
     call env.merge("PATH_INFO" => '/' + params[:slug])
   end
 
-  get '/:slug' do
-    @posts = BlogPost.all + BookReview.all
-    @post = @posts.find { |post| post.slug =~ /#{params[:slug]}/ }
-    @post.nil? ? not_found : (haml :post)
+  get '/about' do
+    haml :about, :layout => false
   end
 
   get '/css/bhuga.css' do
@@ -89,6 +87,12 @@ class Bhuga < Sinatra::Application
 
   not_found do
     haml :'404'
+  end
+
+  get '/:slug' do
+    @posts = BlogPost.all + BookReview.all
+    @post = @posts.find { |post| post.slug =~ /#{params[:slug]}/ }
+    @post.nil? ? not_found : (haml :post)
   end
 
 end
