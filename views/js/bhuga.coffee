@@ -1,33 +1,22 @@
 $ ->
   $('.vibrate').vibrate { speed: 30 }
 
-  $('a').click (event) ->
-    $(event.currentTarget).explode {
-                            angle: true
-                            img:'/images/trexhead.png'
-                            centerOn:event.currentTarget
-                            interval:2
-                            minThrow:500
-                            maxThrow:800
-                            angle:true
-                            num:25
-                            explode: false
-                            extraWidth:100
-                            rotateSpeed:30
-                          }
-    $(event.currentTarget).explode {
-                            angle: true
-                            img:'/images/utahraptorhead.png'
-                            centerOn:event.currentTarget
-                            interval:2
-                            minThrow:500
-                            maxThrow:800
-                            angle:true
-                            num:25
-                            explode: false
-                            extraWidth:200
-                            rotateSpeed:30
-                          }
+  $('.explode').click (event) ->
+    explosion_defaults =
+      interval:2
+      minThrow:500
+      maxThrow:800
+      num:15
+      extraWidth:100
+      rotateSpeed:30
+
+    trex = $.extend({}, explosion_defaults, { img:'/images/trexhead.png' })
+    utahraptor = $.extend({}, explosion_defaults, { img:'/images/utahraptorhead.png' })
+    triceratops = $.extend({}, explosion_defaults, { img:'/images/triceratops-skull.png' })
+
+    $(event.currentTarget).explode($.extend(trex, { centerOn:event.currentTarget }))
+    $(event.currentTarget).explode($.extend(utahraptor, { centerOn:event.currentTarget }))
+    $(event.currentTarget).explode($.extend(triceratops, { centerOn:event.currentTarget }))
 
   $('a').click ->
     # cache href or its gone in the closure later
@@ -49,3 +38,16 @@ $ ->
       clearInterval disqus_loaded
       disqus_loaded_callback()
   , 100
+
+  audioSupported = false
+  if ($.browser.mozilla && $.browser.version.substr(0, 5) >= "1.9.2" || $.browser.webkit)
+    audioSupported = true
+
+  if audioSupported
+    raptorAudio = $('<audio id="elRaptorShriek" preload="auto"><source src="raptor-sound.mp3" /><source src="raptor-sound.ogg" /></audio>')
+    $('body').append(raptorAudio)
+
+  $('#where-am-i').click ->
+    $('#dinosaur-hello').slideDown()
+    if audioSupported
+      $('#elRaptorShriek').get(0).play()

@@ -5,7 +5,20 @@ body {
   text-align: center;
   font-family: Tahoma, sans-serif;
 
+  #where-am-i {
+    text-align: center;
+  }
+
+  #trex-apologizing {
+    img.trex {
+      float:left;
+      width:300px;
+      height:300px;
+    }
+  }
+
   #dinosaur-hello {
+    display: none;
     padding-right: 10px;
     padding-bottom: 10px;
     #message {
