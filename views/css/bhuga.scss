@@ -1,4 +1,8 @@
 body {
+
+  /*
+    layout concerns
+  */
   background-color: #c2ffc2;
   background-image: url('/images/leather_1_op4.png');
   margin: 0px;
@@ -7,18 +11,6 @@ body {
   #container {
     z-index: 5;
     position: relative;
-  }
-
-  #where-am-i {
-    text-align: center;
-  }
-
-  #trex-apologizing {
-    img.trex {
-      float:left;
-      width:300px;
-      height:300px;
-    }
   }
 
   #dinosaur-hello {
@@ -70,8 +62,6 @@ body {
         border-width:15px 0 0 40px; /* vary these values to change the angle of the vertex */
         border-color:transparent #fefee5;
     }
-
-
   }
 
   ul#navbar {
@@ -86,6 +76,7 @@ body {
     }
   }
 
+  // everything's written in freaking DINOSAUR
   h3, h2, button.dsq-button-small, button.dsq-button span, a#dsq-like-thread-button span.dsq-toolbar-label, .dinosaur {
     font-family: '26Regular';
   }
@@ -126,6 +117,7 @@ body {
   }
 
   #where-am-i {
+    text-align: center;
     padding-top: 8px;
     padding-bottom: 8px;
     font-size: 120%;
@@ -176,19 +168,6 @@ body {
     display:block;
   }
 
-  .author {
-    font-size: 80%;
-    margin-left: 15px;
-  }
-
-  .dsq-comment-header-meta-wrapper {
-    font-family: '26Regular';
-  }
-
-  #post-body {
-    font-size: 120%;
-  }
-
   pre {
     border: solid #380000 4px;
     background-color: #fcf7ec;
@@ -196,10 +175,6 @@ body {
     margin-left: 15px;
     code {
     }
-  }
-
-  .post-date {
-    color: #444444;
   }
 
   #sidebar {
@@ -213,7 +188,35 @@ body {
     padding-bottom: 15px;
   }
 
-  #about {
+  /*
+    transparent background dinosaurs, every page.
+  */
+  #transparent-trex {
+    position:fixed;
+    height:600px;
+    width:600px;
+    top:0px;
+    left:0px;
+    z-index:3;
+    filter:alpha(opacity=20);
+    opacity:0.2;
+  }
+
+  #transparent-utahraptor {
+    position:fixed;
+    height:600px;
+    width:600px;
+    top:0px;
+    left:500px;
+    z-index:3;
+    filter:alpha(opacity=20);
+    opacity:0.2;
+  }
+
+  /*
+    stuff for the CV page
+  */
+  #cv {
     #skills, #legend {
       li {
         padding: 5px;
@@ -242,29 +245,64 @@ body {
     }
   }
 
-  #transparent-trex {
-    position:fixed;
-    height:600px;
-    width:600px;
-    top:0px;
-    left:0px;
-    z-index:3;
-    filter:alpha(opacity=20);
-    opacity:0.2;
+  /*
+    stuff for about page
+  */
+  h1#about {
+    font-family: '26Regular';
+    text-align: center;
+  }
+  #description {
+    img#faceshot {
+      float: right;
+      width: 230px;
+      height: 230px;
+      margin-left:20px;
+      -webkit-border-radius:10px;
+      -moz-border-radius:10px;
+      border-radius:10px;
+      border: 5px solid #660000;
+      padding: 0px;
+      background-color: #ffffbc;
+
+    }
   }
 
-  #transparent-utahraptor {
-    position:fixed;
-    height:600px;
-    width:600px;
-    top:0px;
-    left:500px;
-    z-index:3;
-    filter:alpha(opacity=20);
-    opacity:0.2;
+  /*
+    stuff for the individual posts page
+  */
+  .post-date {
+    color: #444444;
+  }
+
+  #post-body {
+    font-size: 120%;
+  }
+
+  .author {
+    font-size: 80%;
+    margin-left: 15px;
+  }
+
+  .dsq-comment-header-meta-wrapper {
+    font-family: '26Regular';
+  }
+
+  /*
+    trexy says sorry on the 404 page
+  */
+  #trex-apologizing {
+    img.trex {
+      float:left;
+      width:300px;
+      height:300px;
+    }
   }
 }
 
+/*
+  jurassic park up in the hizzy
+*/
 @font-face {
     font-family: '26Regular';
     src: url('/fonts/jurassic-webfont.eot');
