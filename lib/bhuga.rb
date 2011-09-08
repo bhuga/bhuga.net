@@ -65,8 +65,8 @@ class Bhuga < Sinatra::Application
     call env.merge("PATH_INFO" => '/' + params[:slug])
   end
 
-  get '/about' do
-    haml :about
+  get '/cv' do
+    haml :cv
   end
 
   get '/css/bhuga.css' do
@@ -76,11 +76,11 @@ class Bhuga < Sinatra::Application
   get '/js/bhuga.js' do
     coffee :'js/bhuga'
   end
-  
+
   get '/js/vibrate.js' do
     coffee :'js/vibrate'
   end
-  
+
   get '/js/explosion.js' do
     coffee :'js/explosion'
   end
