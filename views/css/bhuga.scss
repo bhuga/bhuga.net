@@ -4,6 +4,10 @@ body {
   margin: 0px;
   text-align: center;
   font-family: Tahoma, sans-serif;
+  #container {
+    z-index: 5;
+    position: relative;
+  }
 
   #where-am-i {
     text-align: center;
@@ -53,9 +57,9 @@ body {
         left:50px; /* controls horizontal position */
         border-width:20px 0 0 20px; /* vary these values to change the angle of the vertex */
         border-style:solid;
-        border-color:#fefee5 transparent; 
+        border-color:#fefee5 transparent;
         /* reduce the damage in FF3.0 */
-        display:block; 
+        display:block;
         width:0;
     }
     .triangle-right.right:after {
@@ -64,10 +68,10 @@ body {
         bottom:auto;
         left:auto;
         border-width:15px 0 0 40px; /* vary these values to change the angle of the vertex */
-        border-color:transparent #fefee5; 
+        border-color:transparent #fefee5;
     }
-        
-    
+
+
   }
 
   ul#navbar {
@@ -85,7 +89,7 @@ body {
   h3, h2, button.dsq-button-small, button.dsq-button span, a#dsq-like-thread-button span.dsq-toolbar-label, .dinosaur {
     font-family: '26Regular';
   }
- 
+
   a {
     color:#660000;
     text-decoration: none;
@@ -236,6 +240,17 @@ body {
         color: #330000;
       }
     }
+  }
+
+  #transparent-trex {
+    position:fixed;
+    height:600px;
+    width:600px;
+    top:0px;
+    left:0px;
+    z-index:3;
+    filter:alpha(opacity=40);
+    opacity:0.4;
   }
 }
 
