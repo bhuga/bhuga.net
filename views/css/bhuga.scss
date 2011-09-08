@@ -97,7 +97,7 @@ body {
   }
 
   a:visited {
-    color: #664444;
+    color: #663333;
   }
 
   #brown-background {
@@ -249,8 +249,19 @@ body {
     top:0px;
     left:0px;
     z-index:3;
-    filter:alpha(opacity=40);
-    opacity:0.4;
+    filter:alpha(opacity=20);
+    opacity:0.2;
+  }
+
+  #transparent-utahraptor {
+    position:fixed;
+    height:600px;
+    width:600px;
+    top:0px;
+    left:500px;
+    z-index:3;
+    filter:alpha(opacity=20);
+    opacity:0.2;
   }
 }
 
