@@ -1,88 +1,213 @@
-%html
-  %head
-    %title BHUGA WOOGA
-    %link{:rel => 'stylesheet', :href => '/css/bhuga.css', :type => 'text/css', :media => 'screen, projection'}
-    %link{:rel => 'stylesheet', :href => '/css/grid.css', :type => 'text/css', :media => 'screen, projection'}
-    %script{:type => 'text/javascript', :src =>'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'}
-    %script{:type => 'text/javascript', :src =>'/js/vibrate.js'}
-    %script{:type => 'text/javascript', :src =>'/js/explosion.js'}
-    %script{:type => 'text/javascript', :src =>'/js/bhuga.js'}
-  %body
-    #main
-      #brown-background
-        #container.container_12
-          #header.grid_9
-            #site-name.grid_12.alpha.omega
-              %h1.bigtitle
-                %a{:href => '/' } BHUGA WOOGA!
-            #about
-              I'm Ben Lavender, and I'm on nerd stuff like a Velociraptor on a
-              turkey. I've done all of the following as work. I would say I've
-              been paid to do them all, but that's asking a lot in the world of
-              startups. Oh well.  
-              %ul
-                %li Pull Cable
-                %li Write Ruby
-                %li Develop in Rails
-                %li Manage Infrastructure with Puppet
-                %li Manage Routers
-                %li Manage Switches and other network components
-                %li Determine hardware requirements and assist in purchasing
-                %li Hustle customers (but technical customers, so don't get excited)
-                %li Spreadsheets, financials, and more
-                %li Write PHP for sizable projects
-                %li Manage Drupal installations with over 100 modules
-                %li Be primarily responsible for a 100-server farm
-                %li Rack servers
-                %li Design and implement an auto-scaling AWS infrastructure
-                %li Troubleshoot webapps that end up being layer 2 problems
-                %li Manage, tweak, caress, and generally soothe MySQL databases
-                %li Write Perl
-                %li Write Java
-                %li Act as front-line support for technical customers
-                %li Administrate mail servers
-                %li Write internal tools for large companies
-                %li Fundraising
-                %li Twiddle like every freaking bit Linux has, it seems
-                %li Write Javascript
-                %li Write lots of open-source stuff
-                %li Debug misbehaving vendor applications
-                %li Configure the kind of bloated enterprise software that I don't understand why people keep buying (Openview, in this case)
-                %li Type out all of the old-school protocols in telnet to figure out some problem
-                %li Self-manage projects from user interviews to deployment and delivery
-                %li Act as buildmaster between 15 remote developers and a QA team
-                %li Handle security incidents
-                %li Virtualize a legacy infrastructure
-                %li Visualize testing infrastructure
-                %li Tons of other crap made obsolete by Heroku
-                %li Tons of other crap made obsolete by the cloud
-                %li Tons of other crap made obsolete by Puppet and Chef
-                %li Tons of other crap made obsolete by Google
-                %li Tons of other crap made obsolete by Father Time
-                %li Tons of other crap that will never* be obsolete.
-              #footnote
-                * Not actually never
-              #resume-intro
-                So all of that stuff's not enough? Need a resume?
-              #resume
-                Work History
-                %ul
-                  %li 
-                    %h4 Late 2010-Present
-                    .history Dydra
-                  %li 
-                    %h4 Aug 2009 - Late 2010
-                    .history Freelancing
-                  %li
-                    %h4 Aug 2007 - Aug 2009
-                    .history Openband
-                  %li
-                    %h4 2004-Aug 2007
-                    .history Freelance Web Development
-                  %li
-                    %h4 1998-2004
-                    .history IDS - UniversalCom - Nuvox
-                     
+#about.grid_8
+  So you see the dinosaurs, you see the
+  %a{:href => 'https://github.com/bhuga'} Github link,
+  and you still want a CV before you'll work with Ben? Okay, not everyone's a
+  nerd, so here you go. But if you think that you might have a culture clash
+  with someone who makes dinosaur websites and doesn't own a pair of dress
+  shoes, don't sweat it.
+  %h2 Skills
+  %h3 Legend
+  #legend
+    %ul
+      %li.like  Liked it
+      %li.good  Good at it
+      %li.like.good Both
+      %li * Not actually never
+  %h3 The List
+  %ul#skills
+    %li Pull Cable
+    %li.like.good Write Ruby
+    %li.like.good Develop in Rails
+    %li.like.good Manage Infrastructure with Puppet
+    %li.good Manage Routers
+    %li.good Manage Switches and other network components
+    %li.good Determine hardware requirements and assist in purchasing
+    %li Sell to potential customers (technical ones)
+    %li Spreadsheets, financials, and more
+    %li.good Write PHP for sizable projects
+    %li.good Manage Drupal installations with over 100 modules
+    %li.good Be primarily responsible for a 100-server farm
+    %li Rack servers
+    %li.like Design and implement an auto-scaling AWS infrastructure
+    %li.like.good Troubleshoot webapps that end up being layer 2 problems
+    %li Placate MySQL databases
+    %li.like Write Perl
+    %li Write Java
+    %li.good Act as front-line support for technical customers
+    %li.like.good Write internal tools for large companies
+    %li Fundraising
+    %li.good Twiddle what seems like every freaking bit Linux has
+    %li Write Javascript
+    %li.like Write CoffeeScript
+    %li.like.good Write lots of open-source stuff
+    %li.good Debug misbehaving vendor applications
+    %li.good Configure the kind of bloated enterprise software nobody should ever buy
+    %li.like.good Type out all of the old-school protocols in telnet to figure out some problem
+    %li.like.good Self-manage projects from user interviews to deployment and delivery
+    %li.like.good Act as buildmaster between 15 remote developers and a QA team
+    %li.good Handle security incidents
+    %li.good Virtualize a legacy infrastructure
+    %li Automate CI and visualize the results
+    %li.like Write HAML / SASS
+    %li.like.good Interview technical job applicants
+    %li.like.good Speak German
+    %li Tons of other crap made obsolete by Heroku
+    %li Tons of other crap made obsolete by the cloud
+    %li Tons of other crap made obsolete by Puppet and Chef
+    %li Tons of other crap made obsolete by Google
+    %li Tons of other crap made obsolete by Father Time
+    %li Tons of other crap that will never* be obsolete.
+  #resume-intro
+    Still not enough?
+  %h2 Work History
+  #resume
+    Work History
+    %ul
+      %li
+        %h4 CEO
+        .history
+          .dates Late 2010-Present
+          .employer
+            %a{:href => "http://dydra.com"} Dydra
+          %br
+          .description
+            CEO of Dydra.com, a cloud-based graph database, built on the RDF standard, founded by a 4-man team.
+            %h5 Notables
+            %ul
+              %li Built operational infrastructure on AWS using Puppet.
+
+              %li Raised pre-seed funding and built financial projections,
+              competitive analyses, investor information packets, and more
+              while trying to raise a seed round (ultimately unsuccessful,
+              but whatever, I learned something).
+
+              %li Assisted with development of a sizable frontend application
+              in Rails.
+
+              %li Built a ridiculous dinosaur-themed personal website.
+
+      %li
+        %h4 Freelancing
+        .history
+          .dates Aug 2009 - Late 2010
+          %br
+          .description
+            Various small contract positions while the seeds of Dydra form.
+            Most contracts are 3-5 weeks and paid work is not full time, other
+            time going into preliminary work on Dydra.
+            %h5 Notables
+            %ul
+              %li
+                With a co-founder of Dydra, conquered the RDF library space in Ruby.
+                %a{:href => 'https://rubygems.org/profiles/21452'} See my gems.
+
+              %li Set up an initial management system and performed initial
+              Linux kernel tweaking for a system of 12 very high capacity edge
+              nodes delivered to a top 40 supercomputer.
+
+              %li Designed and implemented an auto-scaling system for the front
+              end of the website for Rock-am-Ring, Germany's biggest music
+              festival. Peak traffic during the festival is several thousand
+              times off-peak traffic, and the system successfully handled it.
+
+      %li
+        %h4 Senior Operations Engineer
+        .history
+          .dates Aug 2007 - Aug 2009
+          .employer
+            %a{ :href => 'http://openband.net/'} Openband
+          %br
+          .description Head system administrator for a 60-server farm running a
+          large number of complex and non-standard Drupal sites in Stuttgart,
+          Germany. In parallel, acted as buildmaster interfacing a 15-man
+          development team to a QA team. Also acted as after-hours support to
+          interface with German-speaking ISP personnel for the NOC housing the
+          farm.
+          %h5 Notables
+          %ul
+            %li Designed and implemented an improved copy of a systems platform
+            for a set of web sites to meet high availability requirements.
+            Maintained support for this stack while designing other systems.
+
+            %li Re-engineered the main software platform running more than 40
+            production web sites.  The new design included several features not
+            available in the original design, including hardware redundancy,
+            high-availability failover, and robust disaster recovery features.
+            Developed and successfully implemented a transition plan to
+            accompany this design, allowing for per-site outages of less than
+            15 minutes for a long-term transition that included driving a truck
+            full of servers around Stuttgart.
+
+            %li Took responsibility for the routers and firewalls supporting
+            the software system, allowing for a much faster turnaround time
+            from recognizing a needed change to implementation, increasing the
+            development team's ability to experiment with new technologies.
+
+            %li Designed and implemented a system to copy existing Drupal web
+            sites, a problem not then (nor now) well solved in the Drupal
+            community.  This system allowed, for the first time, developers to
+            test changes on copies of live sites without affecting production
+            environments, allowing for much quicker development of complicated
+            components.
+
+      %li
+        %h4 Web Developer
+        .history
+          .dates 2004-Aug 2007
+          .employer Freelance Web Development
+          %br
+          .description
+            Freelance web development work, from minor maintenance to
+            from-scratch projects executed to completion. Did everything:
+            initial user interviews, to speccing out requirements, negotiating
+            rates and prices, development, design, and deployment. All projects
+            were internal, and direct access is unfortunately not available.
+          %h5 Complete projects
+          %ul
+            %li A certification and maintenance management system for a marine
+            services company, tracking the certification and maintenance status
+            of hundreds of vessels saving thousands of dollars beginning
+            immediately after deployment.
+
+            %li A call-log reports system for a VoIP company, allowing users to
+            create reports based on phone usage in aggregate or by individual
+            users.
+
+            %li An IP address and router documentation/administration system,
+            allowing an ISP to easily track and manage Internet connections to
+            their customers and automatically generate router configurations.
+      %li
+        %h4 (multiple positions via promotions) Monitoring Technician, Network Engineer, System Administrator, Tools Developer
+        .history
+          .dates 1998-2004
+          .employer Infinity Data Systems, bought by  UniversalCom, bought by  Nuvox (since sold, but I'm not paying attention anymore)
+          %br
+          .description
+            Promoted from entry-level monitoring technician to internal web application developer over 6 years.
+          %h5 Notables
+          %ul
+            %li Was primarily responsible for the design, implementation, and
+            maintenance of a DNS system to replace an aging system. Included 11
+            name servers, including both client caching and authoritative, with
+            more than 100 organizations as customers.  Included view
+            configuration.
+
+            %li Administrated a collection of Linux machines which provided a
+            variety of services, such as email, web, DHCP and DNS.
+
+            %li Maintained several internal web-based software tools for the
+            tracking of IP addresses, customer equipment, etc.
+
+            %li Created new web tools to maintain services, such as log
+            searching across a cluster of mail servers and an easy front end to
+            create and maintain DNS entries for service technicians.
+
+  You want
+  %strong more?!
+  What else could you...oh, right. Education. This matters little for a good programmer, but here you go.
+  %h2 Skoolin
+  University of New Orleans, 2005
+  BS in Computer Science, minor in European Studies
 
 
 

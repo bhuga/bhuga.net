@@ -208,6 +208,35 @@ body {
     margin-top: 45px;
     padding-bottom: 15px;
   }
+
+  #about {
+    #skills, #legend {
+      li {
+        padding: 5px;
+        color: #611;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        vertical-text-align: center;
+        min-height: 43px;
+        width: 45%;
+        margin: 4px;
+        font-weight: bold;
+        background-color: #ffffbc;
+        background-image: url('/images/leather_1_op4.png');
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border: 4px solid #660000;
+      }
+      .like {
+        background-color: #99ff99;
+      }
+      .good {
+        color: #330000;
+      }
+    }
+  }
 }
 
 @font-face {

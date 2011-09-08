@@ -66,7 +66,7 @@ class Bhuga < Sinatra::Application
   end
 
   get '/about' do
-    haml :about, :layout => false
+    haml :about
   end
 
   get '/css/bhuga.css' do
