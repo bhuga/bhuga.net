@@ -66,7 +66,7 @@ class Bhuga < Sinatra::Application
   end
 
 
-  [:cv, :about].each do |page|
+  [:cv, :about, :acknowledgements].each do |page|
     get '/' + page.to_s do
       haml page
     end
