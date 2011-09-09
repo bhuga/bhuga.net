@@ -1,5 +1,5 @@
 $ ->
-  $('.vibrate').vibrate { speed: 80 }
+  $('.vibrate').vibrate { speed: 30 }
 
   $('.explode').click (event) ->
     explosion_defaults =
