@@ -23,9 +23,10 @@ class Bhuga < Sinatra::Application
           posts.each do |post|
             xml.item do
               url = BASE_HOST + '/' + post.slug
-              xml.title  post.title
+              xml.title post.title
               xml.link url
-              xml.description post.body
+              description = post.meta.has_key?(:author) ? "By #{post.author}<br/>" : ""
+              xml.description(description + post.body)
               xml.pubDate Time.new(post.date).rfc2822
               xml.guid url
             end
@@ -64,7 +65,6 @@ class Bhuga < Sinatra::Application
     # note that we do not care about legacy URLs enough to only respond on the correct one...
     call env.merge("PATH_INFO" => '/' + params[:slug])
   end
-
 
   [:cv, :about, :acknowledgements].each do |page|
     get '/' + page.to_s do
@@ -106,6 +106,16 @@ class Bhuga < Sinatra::Application
     @posts = BlogPost.all + BookReview.all
     @post = @posts.find { |post| post.slug =~ /#{params[:slug]}/ }
     @post.nil? ? not_found : (haml :post)
+  end
+
+  helpers do
+    def content_for(key, &block)
+      @content ||= {}
+      @content[key] = capture_haml(&block)
+    end
+    def content(key)
+      @content && @content[key]
+    end
   end
 
 end

@@ -1,14 +1,23 @@
 #blogs.grid_5.alpha
-  %h3 Blog Posts
+  %h3
+    Blog Posts
+    %a{:href => '/feed'}
+      %img{:src => '/images/feed-icon-14x14.png'}
   %ul
     - @blog_posts.each do |post|
       %li.index-post
         #post-title
           %a{:href => "/#{post.slug}"} #{post.title}
 #reviews.grid_4.omega
-  %h3 Book Reviews
+  %h3
+    Book Reviews
+    %a{:href => '/books-feed'}
+      %img{:src => '/images/feed-icon-14x14.png'}
   %ul
     - @book_reviews.each do |post|
       %li.index-post
         %a{:href => "/#{post.slug}"} #{post.title}
         %span.author  by #{post.author}
+
+- content_for :header do
+  %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - feed", :href => "http://#{BASE_HOST}/feeds/posts/default?alt=rss"}

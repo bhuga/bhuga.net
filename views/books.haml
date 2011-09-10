@@ -16,3 +16,6 @@
       %li.index-post
         %a{:href => "/#{post.slug}"} #{post.title}
         %span.author  by #{post.author}
+
+- content_for :header
+  %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - book review feed", :href => "http://#{BASE_HOST}/books-feed"}

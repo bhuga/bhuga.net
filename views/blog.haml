@@ -5,3 +5,5 @@
       %li.index-post
         #post-title
           %a{:href => "/#{post.slug}"} #{post.title}
+- content_for :header
+  %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - feed", :href => "http://#{BASE_HOST}/feed"}
