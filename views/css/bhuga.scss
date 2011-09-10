@@ -345,6 +345,21 @@ body {
     border: 5px solid #660000;
     padding: 10px;
   }
+
+  /* stuff used on the front (index) page
+  */
+  #blogs, #reviews {
+    span.header {
+      font-family: '26Regular';
+      font-size: 35px;
+      a {
+        font-weight: normal;
+      }
+      img {
+        vertical-align:middle;
+      }
+    }
+  }
 }
 
 /*

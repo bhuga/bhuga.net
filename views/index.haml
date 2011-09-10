@@ -1,18 +1,18 @@
 #blogs.grid_5.alpha
-  %h3
-    Blog Posts
+  %span.header
+    %a{:href => '/blog'} Bloggin's
     %a{:href => '/feed'}
-      %img{:src => '/images/feed-icon-14x14.png'}
+      %img{:src => '/images/trex-rss.png' }
   %ul
     - @blog_posts.each do |post|
       %li.index-post
         #post-title
           %a{:href => "/#{post.slug}"} #{post.title}
 #reviews.grid_4.omega
-  %h3
-    Book Reviews
+  %span.header
+    %a{:href => '/books'} Learnin's
     %a{:href => '/books-feed'}
-      %img{:src => '/images/feed-icon-14x14.png'}
+      %img{:src => '/images/trex-rss.png'}
   %ul
     - @book_reviews.each do |post|
       %li.index-post
