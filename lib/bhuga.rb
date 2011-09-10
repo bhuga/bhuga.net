@@ -72,6 +72,16 @@ class Bhuga < Sinatra::Application
     end
   end
 
+  get '/books' do
+    @book_reviews = BookReview.all.sort.reverse
+    haml :books
+  end
+
+  get '/blog' do
+    @posts = BlogPost.all.sort.reverse
+    haml :blog
+  end
+
   get '/css/bhuga.css' do
     scss :'css/bhuga'
   end

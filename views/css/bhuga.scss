@@ -333,6 +333,18 @@ body {
   h1#acknowledgements {
     text-align: center;
   }
+
+  /*
+    stuff used on book review and post indexes
+  */
+  .intro {
+    background-color: #fefee5;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    border: 5px solid #660000;
+    padding: 10px;
+  }
 }
 
 /*

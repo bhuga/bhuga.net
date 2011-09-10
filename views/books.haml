@@ -1,0 +1,18 @@
+#reviews.grid_8
+  %h3 Book Reviews
+  .intro
+    %p
+      Here are reviews of most of the books I read. I write them not for you, but
+      for me; I find that knowing I will write a review makes me read in a more
+      critical, more useful way. Usefully, it leads to being able to put books
+      down, because when I find a major flaw in the first 20 pages, I know the
+      rest of the book is built on bullshit. I recommend it.
+    %p
+      But if you're interested, here they are. Sometimes I forget, so this is
+      not all of them.
+
+  %ul
+    - @book_reviews.each do |post|
+      %li.index-post
+        %a{:href => "/#{post.slug}"} #{post.title}
+        %span.author  by #{post.author}

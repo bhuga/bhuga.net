@@ -1,0 +1,7 @@
+#posts.grid_8
+  %h3 Blog Posts
+  %ul
+    - @posts.each do |post|
+      %li.index-post
+        #post-title
+          %a{:href => "/#{post.slug}"} #{post.title}
