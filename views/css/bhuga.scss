@@ -28,7 +28,7 @@ body {
     }
     #talking-raptor {
       float: right;
-      height: 190px;
+      height: 180px;
       width: 120px;
       padding-left:40px;
     }
@@ -201,8 +201,6 @@ body {
     top:0px;
     left:0px;
     z-index:3;
-    filter:alpha(opacity=20);
-    opacity:0.2;
   }
 
   #transparent-utahraptor {
@@ -212,8 +210,6 @@ body {
     top:0px;
     left:500px;
     z-index:3;
-    filter:alpha(opacity=20);
-    opacity:0.2;
   }
 
   #plesiosaur {
