@@ -1,9 +1,13 @@
 #posts.grid_8
-  %h3 Blog Posts
+  %h2
+    Blog Posts
+    %a{:href => '/feed'}
+      %img{:src => '/images/trex-rss.png' }
   %ul
     - @posts.each do |post|
       %li.index-post
         #post-title
           %a{:href => "/#{post.slug}"} #{post.title}
-- content_for :header
+
+- content_for :header do
   %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - feed", :href => "http://#{BASE_HOST}/feed"}

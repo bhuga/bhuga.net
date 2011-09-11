@@ -1,5 +1,8 @@
 #reviews.grid_8
-  %h3 Book Reviews
+  %h2
+    Book Reviews
+    %a{:href => '/books-feed'}
+      %img{:src => '/images/trex-rss.png' }
   .intro
     %p
       Here are reviews of most of the books I read. I write them not for you, but
@@ -17,5 +20,5 @@
         %a{:href => "/#{post.slug}"} #{post.title}
         %span.author  by #{post.author}
 
-- content_for :header
+- content_for :header do
   %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - book review feed", :href => "http://#{BASE_HOST}/books-feed"}

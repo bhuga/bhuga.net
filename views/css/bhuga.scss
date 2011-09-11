@@ -345,6 +345,16 @@ body {
     border: 5px solid #660000;
     padding: 10px;
   }
+  #posts, #reviews {
+    h2 {
+      font-size: 35px;
+      a {
+        img {
+          vertical-align:middle;
+        }
+      }
+    }
+  }
 
   /* stuff used on the front (index) page
   */
