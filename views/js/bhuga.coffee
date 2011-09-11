@@ -1,4 +1,5 @@
 $ ->
+  # explode on raptor dropdown
   $('.vibrate').vibrate { speed: 30 }
 
   $('.explode').click (event) ->
@@ -18,8 +19,8 @@ $ ->
     $(event.currentTarget).explode($.extend(utahraptor, { centerOn:event.currentTarget }))
     $(event.currentTarget).explode($.extend(triceratops, { centerOn:event.currentTarget }))
 
+  # disqus styling
   disqus_loaded_callback = ->
-    console.log "disqus is all done loading!"
     $('span.dsq-comment-footer-reply button').html('ARGUE!')
     $('span.dsq-like button').html('AWESOME!')
     $('button.dsq-button span').html('POST AS...')
@@ -31,6 +32,7 @@ $ ->
       disqus_loaded_callback()
   , 100
 
+  # velociraptor dropdown
   audioSupported = false
   if ($.browser.mozilla && $.browser.version.substr(0, 5) >= "1.9.2" || $.browser.webkit)
     audioSupported = true
@@ -43,3 +45,13 @@ $ ->
     $('#dinosaur-hello').slideDown()
     if audioSupported
       $('#elRaptorShriek').get(0).play()
+
+  # swimming plesiosaur
+  setInterval ->
+    $('#plesiosaur').swim(
+      speed: 10000
+      z: 5000
+      amplitude: 40
+    )
+  , 8000
+
