@@ -20,4 +20,4 @@
         %span.author  by #{post.author}
 
 - content_for :header do
-  %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - feed", :href => "http://#{BASE_HOST}/feeds/posts/default?alt=rss"}
+  %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - feed", :href => "http://#{ENV['BASE_HOST']}/feeds/posts/default?alt=rss"}

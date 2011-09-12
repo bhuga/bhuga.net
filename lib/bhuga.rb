@@ -5,7 +5,8 @@ require 'time'
 require_relative './post.rb'
 # sets BASE_HOST
 load 'env.rb' if File.exists? 'env.rb'
-raise Exception, "I need an ENV['BASE_HOST'] plz" unless defined?(BASE_HOST)
+
+raise Exception, "I need an ENV['BASE_HOST'] plz" unless defined?(ENV['BASE_HOST'])
 
 class Bhuga < Sinatra::Application
 
@@ -22,7 +23,7 @@ class Bhuga < Sinatra::Application
           xml.link 'http://bhuga.net'
           posts.each do |post|
             xml.item do
-              url = BASE_HOST + '/' + post.slug
+              url = ENV['BASE_HOST'] + '/' + post.slug
               xml.title post.title
               xml.link url
               description = post.meta.has_key?(:author) ? "By #{post.author}<br/>" : ""
