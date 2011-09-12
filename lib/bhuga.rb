@@ -27,7 +27,7 @@ class Bhuga < Sinatra::Application
               xml.link url
               description = post.meta.has_key?(:author) ? "By #{post.author}<br/>" : ""
               xml.description(description + post.body)
-              xml.pubDate Time.at(post.date).rfc2822
+              xml.pubDate post.date.rfc2822
               xml.guid url
             end
           end

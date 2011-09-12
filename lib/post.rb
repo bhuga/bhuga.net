@@ -18,6 +18,7 @@ class Post
       @meta[:month] = $2
       @meta[:slug] = $3
     end
+    @meta[:date] = @meta[:date].nil? ? File.mtime(file) : Time.at(@meta[:date])
   end
 
   def self.all
