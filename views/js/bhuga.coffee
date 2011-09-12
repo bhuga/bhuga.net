@@ -47,7 +47,7 @@ $ ->
       $('#elRaptorShriek').get(0).play()
 
   # swimming plesiosaur
-  setInterval ->
+  setTimeout ->
     $('#plesiosaur').swim(
       speed: 10000
       z: 5000
