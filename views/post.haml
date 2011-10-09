@@ -1,6 +1,6 @@
 .grid_9.alpha
   %h2 #{@post.title}
-  -if #{@post.author}
+  -if @post.meta.has_key?(:author)
     by #{@post.author}
     %br
     %br

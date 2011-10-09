@@ -46,6 +46,7 @@ class Post
   end
 
   def method_missing(method, *args)
+    puts "have key? #{method} #{meta.has_key?(method)} "
     meta.has_key?(method) ? meta[method] : super
   end
 
