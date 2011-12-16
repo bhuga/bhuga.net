@@ -11,3 +11,7 @@ gem 'rake',           '0.9.2'
 group :production do
   gem 'therubyracer'
 end
+
+group :development do
+  gem 'shotgun'
+end
