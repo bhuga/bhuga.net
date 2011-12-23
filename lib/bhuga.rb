@@ -98,6 +98,14 @@ class Bhuga < Sinatra::Application
     haml :'404'
   end
 
+  get '/node/:id' do
+    @posts = BlogPost.all + BookReview.all
+    @post = @posts.find { |post|
+      post.meta[:drupal_id].to_s == params[:id]
+    }
+    @post.nil? ? not_found : (haml :post)
+  end
+
   get '/:slug' do
     @posts = BlogPost.all + BookReview.all
     @post = @posts.find { |post| post.slug =~ /#{params[:slug]}/ }
