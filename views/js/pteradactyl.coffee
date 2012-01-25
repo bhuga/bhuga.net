@@ -18,7 +18,7 @@ $.fn.pteradactyl = (opts = {}) ->
     @div.css('background-position-y', "#{newPosition}")
 
   @interval = setInterval @animateFrame, @speed
-  setTimeout (=> console.log(@interval) ; clearInterval(@interval)), 2300
+  setTimeout (=> clearInterval(@interval)), 2300
   height = $(window).height()
   width = @.width()
   @div.animate({top: height + 100, left: width + 400}, {
