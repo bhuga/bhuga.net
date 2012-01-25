@@ -5,8 +5,12 @@ $.fn.pteradactyl = (opts = {}) ->
   @div.css('height','150px')
   @div.css('width','350px')
   @div.css('z-index',10)
-  @div.css('top',-400)
-  @div.css('left',-400)
+
+  height = @.height()
+  width = @.width()
+
+  @div.css('top',height + 400)
+  @div.css('left',-100)
   @.append(@div)
 
   @speed = (opts.speed || 70) # speed in milliseconds
@@ -18,14 +22,13 @@ $.fn.pteradactyl = (opts = {}) ->
     @div.css('background-position-y', "#{newPosition}")
 
   @interval = setInterval @animateFrame, @speed
-  setTimeout (=> clearInterval(@interval)), 2300
-  height = $(window).height()
-  width = @.width()
-  @div.animate({top: height + 100, left: width + 400}, {
+  setTimeout (=> clearInterval(@interval)), 4000
+
+  @div.animate({top: 0, left: width + 800}, {
     duration: 6000,
     complete: (=> @div.remove() ),
     specialEasing: {
-      top: 'easeOutQuad',
-      left: 'linear'
+      top: 'easeOutQuint',
+      left: 'easeInQuad'
     }
   })
