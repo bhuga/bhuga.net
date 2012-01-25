@@ -55,3 +55,7 @@ $ ->
     )
   , 8000
 
+  # pteradactyl
+  setTimeout ->
+    $('body').pteradactyl()
+  , 12000

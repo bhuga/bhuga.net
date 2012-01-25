@@ -1,4 +1,12 @@
 body {
+  .pteradactyl {
+    position: absolute;
+    background: url('/images/pteradactyl.png');
+    height: 150px;
+    width: 350px;
+    z-index: 10;
+  }
+
 
   /*
     layout concerns

@@ -87,8 +87,8 @@ class Bhuga < Sinatra::Application
     scss :'css/bhuga'
   end
 
-  %w{bhuga vibrate explosion swim}.each do |js|
-    get '/js/' + js + '.js' do
+  %w{bhuga vibrate explosion swim pteradactyl}.each do |js|
+    get "/js/#{js}.js" do
       file = "js/#{js}".to_sym
       coffee file
     end
