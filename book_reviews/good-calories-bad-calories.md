@@ -1,5 +1,6 @@
 ---
 :type: book_review
+:date: 1316994844
 :title: Good Calories, Bad Calories
 :format: Markdown
 :author: Gary Taubes
