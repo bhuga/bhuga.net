@@ -21,10 +21,8 @@ $ ->
 
   # disqus styling
   disqus_loaded_callback = ->
-    $('span.dsq-comment-footer-reply button').html('ARGUE!')
-    $('span.dsq-like button').html('AWESOME!')
-    $('button.dsq-button span').html('POST AS...')
-    $('a#dsq-like-thread-button span.dsq-toolbar-label').html('THIS IS AWESOME!')
+    $('li[id^="dsq-like"] a').text('AWESOME!')
+    $('.dsq-comment-reply').text('ARGUE!')
 
   disqus_loaded = setInterval ->
     if $('#dsq-comments-title').get(0)
