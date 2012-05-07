@@ -88,8 +88,34 @@ body {
   }
 
   // everything's written in freaking DINOSAUR
-  h3, h2, button.dsq-button-small, button.dsq-button span, a#dsq-like-thread-button span.dsq-toolbar-label, .dinosaur {
+  h3, h2,
+  button.dsq-button-small,
+  button.dsq-button span,
+  a#dsq-like-thread-button span.dsq-toolbar-label,
+  .dsq-comment-meta a,
+  .dsq-comment-actions a,
+  .dinosaur {
     font-family: '26Regular';
+  }
+
+  .dsq-comment-meta a,
+  .dsq-comment-actions a {
+    background-color: #B3A8A7;
+    font-family: '26Regular';
+    border: thin solid 1px;
+    padding: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+  }
+  #dsq-content {
+    .dsq-comment-actions, .dsq-comment-meta {
+      overflow: visible;
+    }
+    .dsq-comment-flag, .dsq-comment-header {
+      font-family: 'Disqus';
+    }
   }
 
   a {
