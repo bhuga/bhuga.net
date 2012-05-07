@@ -13,7 +13,7 @@ refresh the page on upload. There are a few gotchas when learning about this,
 so I wanted to write up a quick post that combines the why with the how. It
 should be useful no matter what you want to build regarding this stuff.
 
-### Gotcha 1: HTML5 won't work.
+### Gotcha 1: HTML5 won't work
 
 HTML5 XHR form uploads require an `Access-Control-Allow-Origin` header
 from the server and S3 won't give it to you. It will work if you can accept a
@@ -71,7 +71,7 @@ something like this (not actually what I run):
 
 This won't actually work, because of...
 
-### Gotcha 2: Flash adds a form parameter to uploads.
+### Gotcha 2: Flash adds a form parameter to uploads
 
 Every ActionScript uploader adds a `Filename` parameter to the form associated
 with file uploads over HTTP. A few stackoverflow answers claim it can't be
@@ -123,7 +123,7 @@ It references an `upload` function, which should look something like this. The
 
 This tells SWFUpload to start uploading, bringing us to...
 
-### Gotcha 4: You need a crossdomain.xml file in the target S3 bucket.
+### Gotcha 4: You need a crossdomain.xml file in the target S3 bucket
 
 Again, a malformed crossdomain.xml file will result in more-or-less silent
 failures in your favorite flash uploader. Sigh. They're fairly simple to add to
