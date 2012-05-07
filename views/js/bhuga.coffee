@@ -25,7 +25,7 @@ $ ->
     $('.dsq-comment-reply').text('ARGUE!')
 
   disqus_loaded = setInterval ->
-    if $('#dsq-comments-title').get(0)
+    if $('#disqus_thread div').get(0)
       clearInterval disqus_loaded
       disqus_loaded_callback()
   , 100
