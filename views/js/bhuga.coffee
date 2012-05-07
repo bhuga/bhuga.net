@@ -20,15 +20,11 @@ $ ->
     $(event.currentTarget).explode($.extend(triceratops, { centerOn:event.currentTarget }))
 
   # disqus styling
-  disqus_loaded_callback = ->
-    $('li[id^="dsq-like"] a').text('AWESOME!')
-    $('.dsq-comment-reply').text('ARGUE!')
-
-  disqus_loaded = setInterval ->
-    if $('#disqus_thread div').get(0)
-      clearInterval disqus_loaded
-      disqus_loaded_callback()
-  , 100
+  window.disqus_config = ->
+    @callbacks.afterRender = [ ->
+      $('li[id^="dsq-like"] a').text('AWESOME!')
+      $('.dsq-comment-reply').text('ARGUE!')
+    ]
 
   # velociraptor dropdown
   audioSupported = false
