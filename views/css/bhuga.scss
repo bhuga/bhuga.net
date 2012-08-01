@@ -1,3 +1,22 @@
+@mixin border-radius($first, $second, $third, $fourth) {
+  border-radius: $first $second $third $fourth;
+  -webkit-border-radius: $first $second $third $fourth;
+  -moz-border-radius: $first $second $third $fourth;
+}
+
+$tan: #f3f3e5;
+
+.alert {
+  @include border-radius(4px, 4px, 4px, 4px);
+  background-color: $tan;
+  padding: 15px;
+  h2 {
+    text-align: center;
+    margin-top:15px;
+  }
+}
+
+
 body {
   .pteradactyl {
     position: absolute;
@@ -265,19 +284,7 @@ body {
     stuff for the CV page
   */
   #cv {
-    #intro {
-      background-color: #fefee5;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      padding: 15px;
-      h2 {
-        text-align: center;
-        margin-top:0px;
-      }
-    }
     #skills, #legend {
-      position: relative;
       li {
         box-sizing: border-box;
         padding: 5px 50px 5px 50px;
@@ -472,5 +479,4 @@ body {
          url('/fonts/jurassic-webfont.svg#26Regular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
