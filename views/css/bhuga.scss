@@ -19,7 +19,9 @@ $tan: #f3f3e5;
 .hidden {
   display: none;
 }
-
+.centered {
+  text-align: center;
+}
 
 .pteradactyl {
   position: absolute;
@@ -283,6 +285,10 @@ pre {
   stuff for the CV page
 */
 #cv {
+  h2 {
+    text-align: center;
+    font-size: 3em;
+  }
   #skills, #legend {
     li {
       box-sizing: border-box;
@@ -349,6 +355,11 @@ pre {
       background-image: url('/images/happy-raptor.png'), url('/images/weapon-raptor.png');
       background-position: right top, left top;
       background-repeat: no-repeat;
+    }
+  }
+  #resume {
+    h4 {
+      font-family: '26Regular';
     }
   }
 }
