@@ -277,15 +277,14 @@ body {
       }
     }
     #skills, #legend {
+      position: relative;
       li {
-        padding: 5px;
+        box-sizing: border-box;
+        padding: 5px 50px 5px 50px;
         color: #611;
-        display: inline-block;
         vertical-align: top;
         text-align: center;
         vertical-text-align: center;
-        min-height: 43px;
-        width: 45%;
         margin: 4px;
         font-weight: bold;
         background-color: #ffffbc;
@@ -295,11 +294,55 @@ body {
         border-radius: 4px;
         border: 4px solid #660000;
       }
+    }
+    #legend li {
+      display: block;
+      height: 250px;
+      line-height: 250px;
+      background-size: 51%;
+      &.like {
+        text-align: left;
+      }
+      &.good {
+        text-align: right;
+      }
+    }
+    #skills li {
+      display: inline-block;
+      width: 278px;
+      min-height: 63px;
+      &.like {
+        //text-align: left;
+        background-size: 50px 50px;
+        padding-left: 5px;
+      }
+      &.good {
+        //text-align: right;
+        background-size: 50px 50px;
+        padding-right: 5px;
+      }
+      &.like.good {
+        padding: 5px 50px 5px 50px;
+        background-size: 50px 50px, 50px 50px;
+      }
+    }
+    #skills, #legend {
       .like {
         background-color: #99ff99;
+        background-image: url('/images/happy-raptor.png');
+        background-position: right top;
+        background-repeat: no-repeat;
       }
       .good {
         color: #330000;
+        background-image: url('/images/weapon-raptor.png');
+        background-position: left top;
+        background-repeat: no-repeat;
+      }
+      .like.good {
+        background-image: url('/images/happy-raptor.png'), url('/images/weapon-raptor.png');
+        background-position: right top, left top;
+        background-repeat: no-repeat;
       }
     }
   }
