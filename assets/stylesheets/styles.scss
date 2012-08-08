@@ -9,7 +9,9 @@
 .vibrate {
   padding: 3px;
 }
-
+.text-centered {
+  text-align: center;
+}
 .callout {
   background-color: $yellow;
   border-radius: 10px;
@@ -27,7 +29,7 @@
   position: absolute;
   border-left: 85px solid #FEFEE5;
   border-top: 34px solid transparent;
-  z-index: 4;
+  z-index: 7;
 }
 .right-triangle-border {
   right: -107px;
@@ -35,7 +37,7 @@
   border-left: 106px solid #600;
   border-top: 45px solid transparent;
   position: absolute;
-  z-index: 3;
+  z-index: 6;
 }
 .left {
   float: left;

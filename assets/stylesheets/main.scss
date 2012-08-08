@@ -10,16 +10,35 @@ body {
   margin: 0 auto;
   min-height: 100%;
   #main-contained {
-    width: 960px;
+    width: 920px;
+    z-index: 5;
+    position: relative;
   }
 }
 
 .sidebar {
-  width: 15.625%;
+  width: 16.304%;
   float: right;
 }
 
 .content {
-  width: 84.375%;
+  width: 83.696%;
   float: left;
+}
+#transparent-trex {
+  position: fixed;
+  height: 600px;
+  width: 600px;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
+#transparent-utahraptor {
+  position: fixed;
+  height: 600px;
+  width: 600px;
+  top: 0px;
+  left: 500px;
+  z-index: 3;
 }

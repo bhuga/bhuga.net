@@ -1,23 +1,26 @@
-#blogs.grid_5.alpha
-  %span.header
-    %a{:href => '/blog'} Bloggin's
-    %a{:href => '/feed'}
-      %img{:src => '/images/trex-rss.png' }
-  %ul
-    - @blog_posts.each do |post|
-      %li.index-post
-        #post-title
+#index
+  %section.blogs
+    .text-centered
+      %h2
+        %a{:href => '/blog'} Written
+      %a{:href => '/feed'}
+        %img{:src => '/images/trex-rss.png' }
+    %ul
+      - @blog_posts.each do |post|
+        %li.index-post
+          #post-title
+            %a{:href => "/#{post.slug}"} #{post.title}
+  %section.reviews
+    .text-centered
+      %h2
+        %a{:href => '/books'} Read
+      %a{:href => '/books-feed'}
+        %img{:src => '/images/trex-rss.png'}
+    %ul
+      - @book_reviews.each do |post|
+        %li.index-post
           %a{:href => "/#{post.slug}"} #{post.title}
-#reviews.grid_4.omega
-  %span.header
-    %a{:href => '/books'} Learnin's
-    %a{:href => '/books-feed'}
-      %img{:src => '/images/trex-rss.png'}
-  %ul
-    - @book_reviews.each do |post|
-      %li.index-post
-        %a{:href => "/#{post.slug}"} #{post.title}
-        %span.author  by #{post.author}
+          %span.author  by #{post.author}
 
 - content_for :header do
   %link{ :rel => "alternate", :type => "application/rss+xml", :title => "BHUGA WOOGA - feed", :href => "http://#{ENV['BASE_HOST']}/feeds/posts/default?alt=rss"}
