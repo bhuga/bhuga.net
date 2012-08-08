@@ -23,9 +23,10 @@ vibrateLoop = () ->
 $.fn.vibrate = (opts = { speed: 50}) ->
   $(@).data 'vibrate.speed', opts.speed
   $(@).data 'vibrate.status', false
-  $(@).mouseover ->
-    $(@).data 'vibrate.status', true
-    vibrateLoop.apply @
-  $(@).mouseout ->
+  $(@).mouseenter ->
+    if !($(@).data 'vibrate.status')
+      $(@).data 'vibrate.status', true
+      vibrateLoop.apply @
+  $(@).mouseleave ->
     $(@).data 'vibrate.status', false
   return

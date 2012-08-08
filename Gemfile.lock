@@ -45,5 +45,9 @@ DEPENDENCIES
   sass (= 3.1.7)
   shotgun
   sinatra (= 1.2.6)
+<<<<<<< HEAD
   sprockets
+=======
+  therubyracer
+>>>>>>> b4852613a3054ca57403f0e6bdf5af7b254a22c8
   thin
