@@ -1,3 +1,36 @@
+@import "variables";
+
 .centered {
   margin: 0 auto;
+}
+.hide {
+  display: none;
+}
+.vibrate {
+  padding: 3px;
+}
+
+.callout {
+  background-color: $yellow;
+  border-radius: 10px;
+  padding: 10px;
+  border: 5px solid $red;
+  position: relative;
+}
+
+.right-triangle {
+  right: -85px;
+  top: 40px;
+  position: absolute;
+  border-left: 85px solid #FEFEE5;
+  border-top: 34px solid transparent;
+  z-index: 4;
+}
+.right-triangle-border {
+  right: -107px;
+  top: 34px;
+  border-left: 106px solid #600;
+  border-top: 45px solid transparent;
+  position: absolute;
+  z-index: 3;
 }

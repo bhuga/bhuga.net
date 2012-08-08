@@ -1,3 +1,4 @@
+@import "variables";
 /*
 jurassic park up in the hizzy
 */
@@ -11,10 +12,6 @@ jurassic park up in the hizzy
   font-weight: normal;
   font-style: normal;
 }
-
-$red: #600;
-$dark-red: darken($red, 10);
-$darker-red: darken($red, 20);
 
 h1,h2,h3,h4,h5,h6,.dinosaur {
   font-family: 'DINOSAUR!';

@@ -30,26 +30,23 @@
                 %a{:href => '/books'} reading
               %li
                 %a{:href => '/cv'} hire
-            %h3.exploding-dinosaurs
-              %a{:href => '#'} -  exploding dinosaurs  - 
+            %a.explode.exploding-dinosaurs.vibrate{:href => '#'} -  exploding dinosaurs  - 
             -# this little fella appears when you click exploding dinosaurs
-            #dinosaur-hello.hidden
-              %img#talking-raptor{:src => '/images/raptor.png'}
-              #message.triangle-right.right
-                Hi there! You've reached the homepage of
-                %strong Ben Lavender,
-                who partakes in varying sorts of tomfoolery, such as
-                programming, operations, data stuff, and sci fi, and thinks
-                those things are all
-                %strong fun.
-                You've found his home on the web, with the caveat that most of
-                his personal stuff ends up on social networks. So this is
-                mostly his work stuff, and he's really not as stodgy as this
-                site would have him seem. You can find out more about Ben on
-                his
-                %a{:href => '/about'} about page!
-                %strong Enjoy your stay.
-          %h1 BHUGA WOOGA!
+          #dinosaur-hello.hide.clearfix
+            %img#talking-raptor{:src => '/images/raptor.png'}
+            .callout
+              Hi there! You've reached the homepage of
+              %strong.dinosaur Ben Lavender!
+              Ben is a computery person who partakes in many kinds of nerd
+              tomfoolery, but mostly programming! You've found his home on the
+              web, with the caveat that a lot his day-to-day stuff ends up on
+              social networks, so this site makes him seem pretty stodgy.
+              %br
+              %strong Enjoy your stay.
+              .right-triangle
+              .right-triangle-border
+          %h1
+            %a{:href => '/'} BHUGA WOOGA!
         %section.content
           = yield
         = haml :sidebar

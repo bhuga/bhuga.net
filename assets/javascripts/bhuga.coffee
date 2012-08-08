@@ -19,13 +19,6 @@ $ ->
     $(event.currentTarget).explode($.extend(utahraptor, { centerOn:event.currentTarget }))
     $(event.currentTarget).explode($.extend(triceratops, { centerOn:event.currentTarget }))
 
-  # disqus styling
-  window.disqus_config = ->
-    @callbacks.afterRender = [ ->
-      $('li[id^="dsq-like"] a').text('AWESOME!')
-      $('.dsq-comment-reply').text('ARGUE!')
-    ]
-
   # velociraptor dropdown
   audioSupported = false
   if ($.browser.mozilla && $.browser.version.substr(0, 5) >= "1.9.2" || $.browser.webkit)
@@ -35,7 +28,7 @@ $ ->
     raptorAudio = $('<audio id="elRaptorShriek" preload="auto"><source src="/raptor-sound.mp3" /><source src="/raptor-sound.ogg" /></audio>')
     $('body').append(raptorAudio)
 
-  $('#where-am-i').click ->
+  $('.exploding-dinosaurs').click ->
     $('#dinosaur-hello').slideDown()
     if audioSupported
       $('#elRaptorShriek').get(0).play()
