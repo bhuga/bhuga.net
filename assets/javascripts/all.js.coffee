@@ -1,3 +1,4 @@
+#= require ./console
 #= require ./vibrate
 #= require ./jquery.easing.1.3
 #= require ./swim
