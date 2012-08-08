@@ -17,46 +17,48 @@
   = content :header
   %body
     .main-container
-      %header
-        %nav
-          %ul
-            %li
-              %a{:href => '/about' } about
-            %li
-              %a{:href => '/blog'} writing
-            %li
-              %a{:href => '/books'} reading
-            %li
-              %a{:href => '/cv'} hire
-          %h3.exploding-dinosaurs
-            %a{:href => '#'} exploding dinosaurs
-          -# this little fella appears when you click exploding dinosaurs
-          #dinosaur-hello.hidden
-            %img#talking-raptor{:src => '/images/raptor.png'}
-            #message.triangle-right.right
-              Hi there! You've reached the homepage of
-              %strong Ben Lavender,
-              who partakes in varying sorts of tomfoolery, such as
-              programming, operations, data stuff, and sci fi, and thinks
-              those things are all
-              %strong fun.
-              You've found his home on the web, with the caveat that most of
-              his personal stuff ends up on social networks. So this is
-              mostly his work stuff, and he's really not as stodgy as this
-              site would have him seem. You can find out more about Ben on
-              his
-              %a{:href => '/about'} about page!
-              %strong Enjoy your stay.
-        %h1 BHUGA WOOGA!
-      %section.content
-        = yield
-      = haml :sidebar
+      -# this is inside the 1060px background with jagged edges
+      #main-contained.centered
+        %header
+          %nav
+            %ul
+              %li
+                %a{:href => '/about' } about
+              %li
+                %a{:href => '/blog'} writing
+              %li
+                %a{:href => '/books'} reading
+              %li
+                %a{:href => '/cv'} hire
+            %h3.exploding-dinosaurs
+              %a{:href => '#'} -  exploding dinosaurs  - 
+            -# this little fella appears when you click exploding dinosaurs
+            #dinosaur-hello.hidden
+              %img#talking-raptor{:src => '/images/raptor.png'}
+              #message.triangle-right.right
+                Hi there! You've reached the homepage of
+                %strong Ben Lavender,
+                who partakes in varying sorts of tomfoolery, such as
+                programming, operations, data stuff, and sci fi, and thinks
+                those things are all
+                %strong fun.
+                You've found his home on the web, with the caveat that most of
+                his personal stuff ends up on social networks. So this is
+                mostly his work stuff, and he's really not as stodgy as this
+                site would have him seem. You can find out more about Ben on
+                his
+                %a{:href => '/about'} about page!
+                %strong Enjoy your stay.
+          %h1 BHUGA WOOGA!
+        %section.content
+          = yield
+        = haml :sidebar
 
-      %footer
-        :markdown
-          I don't believe in copyright. Copy my stuff and attribute it to your cat. I don't care. See
-          [the acknowledgements](/acknowledgements) to see who helped me bring dinosaurs to life.
+        %footer
+          :markdown
+            I don't believe in copyright. Copy my stuff and attribute it to your cat. I don't care. See
+            [the acknowledgements](/acknowledgements) to see who helped me bring dinosaurs to life.
 
-      -# these guys are backgroundish-images that will be absolutely positioned.
-      %img#transparent-trex{:src => '/images/trex-crazyeye.png'}
-      %img#transparent-utahraptor{:src => '/images/leaping-utahraptor.png'}
+        -# these guys are backgroundish-images that will be absolutely positioned.
+        %img#transparent-trex{:src => '/images/trex-crazyeye.png'}
+        %img#transparent-utahraptor{:src => '/images/leaping-utahraptor.png'}

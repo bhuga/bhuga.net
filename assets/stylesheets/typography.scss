@@ -2,7 +2,7 @@
 jurassic park up in the hizzy
 */
 @font-face {
-  font-family: 'DINOSAUR';
+  font-family: 'DINOSAUR!';
   src: url('/fonts/jurassic-webfont.eot');
   src: url('/fonts/jurassic-webfont.eot?#iefix') format('embedded-opentype'),
        url('/fonts/jurassic-webfont.woff') format('woff'),
@@ -12,6 +12,18 @@ jurassic park up in the hizzy
   font-style: normal;
 }
 
+$red: #600;
+$dark-red: darken($red, 10);
+$darker-red: darken($red, 20);
+
 h1,h2,h3,h4,h5,h6,.dinosaur {
-  font-family: 'DINOSAUR';
+  font-family: 'DINOSAUR!';
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: $red;
+}
+a:visited {
+  color: $dark-red;
 }
