@@ -2,8 +2,6 @@
   %head
     %title BHUGA WOOGA
     %link{:rel => 'stylesheet', :href => '/assets/all.css', :type => 'text/css', :media => 'screen, projection'}
-    %script{:type => 'text/javascript', :src =>'https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js'}
-    -#%script{:type => 'text/javascript', :src =>'/js/jquery-1.4.3.js'}
     %script{:type => 'text/javascript', :src => '/assets/all.js'}
     :javascript
       var _gaq = _gaq || [];
@@ -18,102 +16,47 @@
 
   = content :header
   %body
-    #main
-      #brown-background
-        #container.container_12
-          #header.grid_9
-            #site-name.grid_12.alpha.omega
-              %ul#navbar
-                %li
-                  %a{:href => '/about' } about
-                %li
-                  %a{:href => '/blog'} blog
-                %li
-                  %a{:href => '/books'} books
-                %li
-                  %a{:href => '/cv'} hire 
-              %h1.bigtitle
-                %a{:href => '/' } BHUGA WOOGA!
-          #hello-and-content.grid_10.alpha
-            %h3#where-am-i.explode.vibrate
-              %a{:href => '#' } What's this site?
-            #dinosaur-hello.hidden
-              %img#talking-raptor{:src => '/images/raptor.png'}
-              #message.triangle-right.right
-                Hi there! You've reached the homepage of
-                %strong Ben Lavender,
-                who partakes in varying sorts of tomfoolery, such as
-                programming, operations, data stuff, and sci fi, and thinks
-                those things are all
-                %strong fun.
-                You've found his home on the web, with the caveat that most of
-                his personal stuff ends up on social networks. So this is
-                mostly his work stuff, and he's really not as stodgy as this
-                site would have him seem. You can find out more about Ben on
-                his
-                %a{:href => '/about'} about page!
-                %strong Enjoy your stay.
-            %hr
-            #content-grid.push_1
-              = yield
-          #sidebar.grid_2.omega.smaller
-            #profile-pic
-              %span#where-am-i.dinosaur This site's amazing! How do I tell the author that?
-              %img.framed{:src => '/images/camel.jpg', :alt => 'Ben and a Camel'}
-              %span.tiny
-                Camels smell freaking terrible but I'm no hater.
-            %br
-            While most mammals are still just sharing pictures, Ben is
-            freaking
-            %strong Social Networking
-            over here. Get with the program.
-            Please choose a venue to contact him from the fine
-            selection below.
-            #github.snetwork-box
-              .description
-                See Ben's
-                %strong code
-                on
-                %strong Github,
-                report
-                %strong bugs,
-                and make
-                %strong snotty comments
-                about his choice of
-                %strong stylistic dogma.
-              %a{:href => 'http://github.com/bhuga'}
-                %img{:src => '/images/octocat.png'}
-            #twitter.snetwork-box
-              .description
-                Follow Ben on
-                %strong Twitter,
-                where you can hear him
-                %strong complain
-                about products and services that he will usually
-                %strong purchase anyway.
-              %a{:href => 'http://twitter.com/bhuga'}
-                %img{:src => '/images/twitter-bird.png'}
-            #facebook.snetwork-box
-              .description
-                Ben is on
-                %strong Facebook,
-                and feel free to contact him there if your inquiry involves
-                %strong drinking
-                or cavorting in the
-                %strong French Quarter,
-                the
-                %strong Marigny, or
-                the
-                %strong Bywater.
-              %a{:href => 'http://facebook.com/blavender'}
-                %img{:src => '/images/f_logo_transparent.png'}
-          #clearer.clear
-          #footer
-            I don't believe in copyright. Copy my stuff and attribute it to your cat. I don't care.
-            %br
-            But being a grown-up, I made a
-            %a{:href => '/acknowledgements'} page of acknowledgements
-            because I used others' work to build this.
-    %img#transparent-trex{:src => '/images/trex-crazyeye.png'}
-    %img#transparent-utahraptor{:src => '/images/leaping-utahraptor.png'}
-    %img#plesiosaur{:src => '/images/plesiosaur.png'}
+    .main-container
+      %header
+        %nav
+          %ul
+            %li
+              %a{:href => '/about' } about
+            %li
+              %a{:href => '/blog'} writing
+            %li
+              %a{:href => '/books'} reading
+            %li
+              %a{:href => '/cv'} hire
+          %h3.exploding-dinosaurs
+            %a{:href => '#'} exploding dinosaurs
+          -# this little fella appears when you click exploding dinosaurs
+          #dinosaur-hello.hidden
+            %img#talking-raptor{:src => '/images/raptor.png'}
+            #message.triangle-right.right
+              Hi there! You've reached the homepage of
+              %strong Ben Lavender,
+              who partakes in varying sorts of tomfoolery, such as
+              programming, operations, data stuff, and sci fi, and thinks
+              those things are all
+              %strong fun.
+              You've found his home on the web, with the caveat that most of
+              his personal stuff ends up on social networks. So this is
+              mostly his work stuff, and he's really not as stodgy as this
+              site would have him seem. You can find out more about Ben on
+              his
+              %a{:href => '/about'} about page!
+              %strong Enjoy your stay.
+        %h1 BHUGA WOOGA!
+      %section.content
+        = yield
+      = haml :sidebar
+
+      %footer
+        :markdown
+          I don't believe in copyright. Copy my stuff and attribute it to your cat. I don't care. See
+          [the acknowledgements](/acknowledgements) to see who helped me bring dinosaurs to life.
+
+      -# these guys are backgroundish-images that will be absolutely positioned.
+      %img#transparent-trex{:src => '/images/trex-crazyeye.png'}
+      %img#transparent-utahraptor{:src => '/images/leaping-utahraptor.png'}

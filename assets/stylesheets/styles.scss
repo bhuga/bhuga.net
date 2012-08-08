@@ -2,3 +2,12 @@ body {
   background-color: #c2ffc2;
   background-image: url('/images/leather_1_op4.png');
 }
+
+.main-container {
+  background-image: url('/images/wide-brown.png');
+  background-repeat: repeat-y;
+  width: 1060px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 0px 70px 0px 70px;
+}
