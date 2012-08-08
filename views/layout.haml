@@ -47,9 +47,11 @@
               .right-triangle-border
           %h1
             %a{:href => '/'} BHUGA WOOGA!
-        %section.content
-          = yield
-        = haml :sidebar
+        .clearfix
+          %section.content
+            = yield
+          %section.sidebar
+            = haml :sidebar
 
         %footer
           :markdown

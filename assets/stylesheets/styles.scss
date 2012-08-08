@@ -16,6 +16,9 @@
   padding: 10px;
   border: 5px solid $red;
   position: relative;
+  a {
+    font-weight: bold;
+  }
 }
 
 .right-triangle {
@@ -33,4 +36,10 @@
   border-top: 45px solid transparent;
   position: absolute;
   z-index: 3;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
 }
