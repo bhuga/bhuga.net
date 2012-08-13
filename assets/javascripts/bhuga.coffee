@@ -23,6 +23,11 @@ $ ->
     $(event.currentTarget).explode($.extend(utahraptor, { centerOn:event.currentTarget }))
     $(event.currentTarget).explode($.extend(triceratops, { centerOn:event.currentTarget }))
 
+    $('#dinosaur-hello').slideDown()
+    if audioSupported
+      $('#elRaptorShriek').get(0).play()
+
+
   # velociraptor dropdown
   audioSupported = false
   if ($.browser.mozilla && $.browser.version.substr(0, 5) >= "1.9.2" || $.browser.webkit)
@@ -31,11 +36,6 @@ $ ->
   if audioSupported
     raptorAudio = $('<audio id="elRaptorShriek" preload="auto"><source src="/raptor-sound.mp3" /><source src="/raptor-sound.ogg" /></audio>')
     $('body').append(raptorAudio)
-
-  $('.exploding-dinosaurs').click ->
-    $('#dinosaur-hello').slideDown()
-    if audioSupported
-      $('#elRaptorShriek').get(0).play()
 
   # swimming plesiosaur
   setTimeout ->
