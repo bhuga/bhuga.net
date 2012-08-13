@@ -1,19 +1,20 @@
+addCss = (el, property, amount) ->
+  el = $(el)
+  current = parseInt(el.css(property))
+  el.css(property, current + amount)
+
 vibrateLoop = () ->
-  left   = parseInt $(@).css('padding-left')
-  right  = parseInt $(@).css('padding-right')
-  top    = parseInt $(@).css('padding-top')
-  bottom = parseInt $(@).css('padding-bottom')
   if $(@).data 'vibrate.wiggled'
-    $(@).css 'padding-left', left + 1
-    $(@).css 'padding-bottom', bottom + 1
-    $(@).css 'padding-top', top - 1
-    $(@).css 'padding-right', right - 1
+    addCss(@, 'padding-left', 1)
+    addCss(@, 'padding-bottom', 1)
+    addCss(@, 'padding-right', -1)
+    addCss(@, 'padding-top', -1)
     $(@).data 'vibrate.wiggled', false
   else
-    $(@).css 'padding-left', left - 1
-    $(@).css 'padding-bottom', bottom - 1
-    $(@).css 'padding-top', top + 1
-    $(@).css 'padding-right', right + 1
+    addCss(@, 'padding-left', -1)
+    addCss(@, 'padding-bottom', -1)
+    addCss(@, 'padding-right', 1)
+    addCss(@, 'padding-top', 1)
     $(@).data 'vibrate.wiggled', true
   if $(@).data 'vibrate.status' || $(@).data 'vibrate.wiggled'
     setTimeout ( () =>
@@ -21,12 +22,13 @@ vibrateLoop = () ->
     ),$(@).data('vibrate.speed')
 
 $.fn.vibrate = (opts = { speed: 50}) ->
-  $(@).data 'vibrate.speed', opts.speed
-  $(@).data 'vibrate.status', false
-  $(@).mouseenter ->
+  el = $(@)
+  el.data 'vibrate.speed', opts.speed
+  el.data 'vibrate.status', false
+  el.on 'vibrate:start', ->
     if !($(@).data 'vibrate.status')
       $(@).data 'vibrate.status', true
       vibrateLoop.apply @
-  $(@).mouseleave ->
+  el.on 'vibrate:stop', ->
     $(@).data 'vibrate.status', false
   return

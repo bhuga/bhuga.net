@@ -1,6 +1,10 @@
 $ ->
   # explode on raptor dropdown
   $('.vibrate').vibrate { speed: 30 }
+  $('.vibrate').mouseenter (e) ->
+    $(e.target).trigger 'vibrate:start'
+  $('.vibrate').mouseleave (e) ->
+    $(e.target).trigger 'vibrate:stop'
 
   $('.explode').click (event) ->
     explosion_defaults =
