@@ -1,7 +1,7 @@
-#cv.grid_8
-  .alert
-    .centered
-      %h4.dinosaur Want to hire Ben?
+#cv
+  .callout
+    .text-centered
+      %h4.dinosaur Why do I want to hire Ben?
       Ben's a strong generalist, with focus these days in
       %span.dinosaur Ruby
       and
@@ -22,7 +22,7 @@
       where he says he likes
       %span.dinosaur VIM?
       %br
-    %h2 BUT YOU WANT MORE!?!
+      %span.huge.dinosaur BUT YOU WANT MORE!?!
     Okay, not everyone's a nerd, so here you go. But if you think that you
     might have a culture clash with someone who makes dinosaur websites and
     doesn't own a pair of dress shoes, I wouldn't worry about it.
@@ -40,14 +40,16 @@
       %li.good Ben's good at this!
   %h3 The List
   %ul#skills
-    %li.like Pull Cable
     %li.like.good Write Ruby
     %li.like.good Develop in Rails
     %li.like.good Manage Infrastructure with Puppet
     %li.good Manage Routers
     %li.good Manage Switches and other network components
+    %li.like.good Implementing CSS
+    %li.like.good Write CoffeeScript
     %li.good Determine hardware requirements and assist in purchasing
     %li Sell to potential customers (technical ones)
+    %li.like.good Use Backbone.js
     %li Spreadsheets, financials, and more
     %li.good Write PHP for sizable projects
     %li.good Manage Drupal installations with over 100 modules
@@ -98,12 +100,23 @@
           .description
             Chief nerd at Liveset.com
 
-            %h5 Notables
-            %ul
-              %li Moved an existing site with CMS to Heroku
-              %li Turn an existing site with existing CSS and Javascript into something fun to work with
-              %li Integrated and automated audio processing with video processing and CDN distribution systems
-              %li Built a custom audio interface specific to site needs
+          %h5 Notables
+          %ul
+            %li
+              Moved an existing site, complete with CMS, to Heroku
+            %li
+              Turn a legacy site with existing CSS and Javascript into
+              something fun to work with based on CoffeeScript, Haml,
+              Backbone.js, and more.
+            %li
+              Implemented a number of trackable features, including reworked
+              chat, geo-located advertisements for upcoming shows, CD sales,
+              and more.
+            %li
+              Integrated an automated audio processing backend with video
+              processing and CDN distribution systems.
+            %li
+              Built a custom audio player specific to site needs of simplicity and theme.
       %li
         %h4 CEO
         .history
@@ -113,16 +126,18 @@
           %br
           .description
             CEO of Dydra.com, a cloud-based graph database, built on the RDF standard, founded by a 4-man team.
-            %h5 Notables
-            %ul
-              %li Built operational infrastructure on AWS using Puppet.
+          %h5 Notables
+          %ul
+            %li Built operational infrastructure on AWS using Puppet.
 
-              %li Raised pre-seed funding and built financial projections,
+            %li
+              Raised pre-seed funding and built financial projections,
               competitive analyses, investor information packets, and more
               while trying to raise a seed round (ultimately unsuccessful,
               but whatever, I learned something).
 
-              %li Assisted with development of a sizable frontend application
+            %li
+              Assisted with development of a sizable frontend application
               in Rails.
 
       %li
@@ -134,17 +149,19 @@
             Various small contract positions while the seeds of Dydra form.
             Most contracts are 3-5 weeks and paid work is not full time, other
             time going into preliminary work on Dydra.
-            %h5 Notables
-            %ul
-              %li
-                With a co-founder of Dydra, conquered the RDF library space in Ruby.
-                %a{:href => 'https://rubygems.org/profiles/21452'} See my gems.
+          %h5 Notables
+          %ul
+            %li
+              With a co-founder of Dydra, conquered the RDF library space in Ruby.
+              %a{:href => 'https://rubygems.org/profiles/21452'} See my gems.
 
-              %li Set up an initial management system and performed initial
+            %li
+              Set up an initial management system and performed initial
               Linux kernel tweaking for a system of 12 very high capacity edge
               nodes delivered to a top 40 supercomputer.
 
-              %li Designed and implemented an auto-scaling system for the front
+            %li
+              Designed and implemented an auto-scaling system for the front
               end of the website for Rock-am-Ring, Germany's biggest music
               festival. Peak traffic during the festival is several thousand
               times off-peak traffic, and the system successfully handled it.
@@ -156,38 +173,43 @@
           .employer
             %a{ :href => 'http://openband.net/'} Openband
           %br
-          .description Head system administrator for a 60-server farm running a
-          large number of complex and non-standard Drupal sites in Stuttgart,
-          Germany. In parallel, acted as buildmaster interfacing a 15-man
-          development team to a QA team. Also acted as after-hours support to
-          interface with German-speaking ISP personnel for the NOC housing the
-          farm.
+          .description
+            Head system administrator for a 60-server farm running a
+            large number of complex and non-standard Drupal sites in Stuttgart,
+            Germany. In parallel, acted as buildmaster interfacing a 15-man
+            development team to a QA team. Also acted as after-hours support to
+            interface with German-speaking ISP personnel for the NOC housing the
+            farm.
           %h5 Notables
           %ul
-            %li Designed and implemented an improved copy of a systems platform
-            for a set of web sites to meet high availability requirements.
-            Maintained support for this stack while designing other systems.
+            %li
+              Designed and implemented an improved copy of a systems platform
+              for a set of web sites to meet high availability requirements.
+              Maintained support for this stack while designing other systems.
 
-            %li Re-engineered the main software platform running more than 40
-            production web sites.  The new design included several features not
-            available in the original design, including hardware redundancy,
-            high-availability failover, and robust disaster recovery features.
-            Developed and successfully implemented a transition plan to
-            accompany this design, allowing for per-site outages of less than
-            15 minutes for a long-term transition that included driving a truck
-            full of servers around Stuttgart.
+            %li
+              Re-engineered the main software platform running more than 40
+              production web sites.  The new design included several features not
+              available in the original design, including hardware redundancy,
+              high-availability failover, and robust disaster recovery features.
+              Developed and successfully implemented a transition plan to
+              accompany this design, allowing for per-site outages of less than
+              15 minutes for a long-term transition that included driving a truck
+              full of servers around Stuttgart.
 
-            %li Took responsibility for the routers and firewalls supporting
-            the software system, allowing for a much faster turnaround time
-            from recognizing a needed change to implementation, increasing the
-            development team's ability to experiment with new technologies.
+            %li
+              Took responsibility for the routers and firewalls supporting
+              the software system, allowing for a much faster turnaround time
+              from recognizing a needed change to implementation, increasing the
+              development team's ability to experiment with new technologies.
 
-            %li Designed and implemented a system to copy existing Drupal web
-            sites, a problem not then (nor now) well solved in the Drupal
-            community.  This system allowed, for the first time, developers to
-            test changes on copies of live sites without affecting production
-            environments, allowing for much quicker development of complicated
-            components.
+            %li
+              Designed and implemented a system to copy existing Drupal web
+              sites, a problem not then (nor now) well solved in the Drupal
+              community.  This system allowed, for the first time, developers to
+              test changes on copies of live sites without affecting production
+              environments, allowing for much quicker development of complicated
+              components.
 
       %li
         %h4 Web Developer
@@ -201,20 +223,23 @@
             initial user interviews, to speccing out requirements, negotiating
             rates and prices, development, design, and deployment. All projects
             were internal, and direct access is unfortunately not available.
-          %h5 Complete projects
+          %h5 Completed projects
           %ul
-            %li A certification and maintenance management system for a marine
-            services company, tracking the certification and maintenance status
-            of hundreds of vessels saving thousands of dollars beginning
-            immediately after deployment.
+            %li
+              A certification and maintenance management system for a marine
+              services company, tracking the certification and maintenance status
+              of hundreds of vessels saving thousands of dollars beginning
+              immediately after deployment.
 
-            %li A call-log reports system for a VoIP company, allowing users to
-            create reports based on phone usage in aggregate or by individual
-            users.
+            %li
+              A call-log reports system for a VoIP company, allowing users to
+              create reports based on phone usage in aggregate or by individual
+              users.
 
-            %li An IP address and router documentation/administration system,
-            allowing an ISP to easily track and manage Internet connections to
-            their customers and automatically generate router configurations.
+            %li
+              An IP address and router documentation/administration system,
+              allowing an ISP to easily track and manage Internet connections to
+              their customers and automatically generate router configurations.
       %li
         %h4 (multiple positions via promotions) Monitoring Technician, Network Engineer, System Administrator, Tools Developer
         .history
@@ -222,39 +247,46 @@
           .employer Infinity Data Systems, bought by  UniversalCom, bought by  Nuvox (since sold, but I'm not paying attention anymore)
           %br
           .description
-            Promoted from entry-level monitoring technician to internal web application developer over 6 years.
+            Promoted from entry-level monitoring technician to internal web
+            application developer over 6 years.
+
           %h5 Notables
           %ul
-            %li Was primarily responsible for the design, implementation, and
-            maintenance of a DNS system to replace an aging system. Included 11
-            name servers, including both client caching and authoritative, with
-            more than 100 organizations as customers.  Included view
-            configuration.
+            %li 
+              Was primarily responsible for the design, implementation, and
+              maintenance of a DNS system to replace an aging system. Included 11
+              name servers, including both client caching and authoritative, with
+              more than 100 organizations as customers.  Included view
+              configuration.
 
-            %li Administrated a collection of Linux machines which provided a
-            variety of services, such as email, web, DHCP and DNS.
+            %li
+              Administrated a collection of Linux machines which provided a
+              variety of services, such as email, web, DHCP and DNS.
 
-            %li Maintained several internal web-based software tools for the
-            tracking of IP addresses, customer equipment, etc.
+            %li
+              Maintained several internal web-based software tools for the
+              tracking of IP addresses, customer equipment, etc.
 
-            %li Created new web tools to maintain services, such as log
-            searching across a cluster of mail servers and an easy front end to
-            create and maintain DNS entries for service technicians.
+            %li
+              Created new web tools to maintain services, such as log
+              searching across a cluster of mail servers and an easy front end to
+              create and maintain DNS entries for service technicians.
 
-  You want
-  %strong more?!
-  What else could you...oh, right. Education. This matters little for a good programmer, but here you go.
-  %h2 Skoolin'
-  University of New Orleans, 2005
-  %br
-  BS in Computer Science, minor in European Studies
-  %h5 Notables
-  %ul
-    %li 2 Years in Austria on a study abroad scholarship
-    %li More little scholarships along the way
-    %li Graduated in Austria remotely (thx Katrina!)
-    %li Learned me a Prolog
-    %li Made lego robots run into walls intelligently
+  .education
+    You want
+    %strong more?!
+    What else could you...oh, right. Education. This matters little for a good programmer, but here you go.
+    %h2 Skoolin'
+    University of New Orleans, 2005
+    %br
+    BS in Computer Science, minor in European Studies
+    %h5 Notables
+    %ul
+      %li 2 Years in Austria on a study abroad scholarship
+      %li More little scholarships along the way
+      %li Graduated in Austria remotely (thx Katrina!)
+      %li Learned me a Prolog
+      %li Made lego robots run into walls intelligently
 
 
 
