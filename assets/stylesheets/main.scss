@@ -42,3 +42,11 @@ body {
   left: 500px;
   z-index: 3;
 }
+#plesiosaur {
+  position: fixed;
+  display: none;
+  left: 0px;
+  bottom: -30px;
+  height: 147px;
+  width: 150px;
+}
