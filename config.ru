@@ -4,7 +4,8 @@ $:.unshift './lib'
 require 'bundler'
 Bundler.setup
 require 'sprockets'
-
+require 'asset_helpers'
+require 'sass-extensions'
 require 'bhuga'
 map '/assets' do
   sprockets = Sprockets::Environment.new

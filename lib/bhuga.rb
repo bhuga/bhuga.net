@@ -112,30 +112,16 @@ class Bhuga < Sinatra::Application
     @post.nil? ? not_found : (haml :post)
   end
 
-  helpers do
-    def content_for(key, &block)
-      @content ||= {}
-      @content[key] = capture_haml(&block)
-    end
-    def content(key)
-      @content && @content[key]
-    end
-
-    def digest_asset_path(pathname)
-      '/assets/' + settings.sprockets.find_asset(pathname).digest_path
-    end
-
-    def asset_host
-      ENV['ASSET_HOST'].nil? ? '' : "http://#{ENV['ASSET_HOST']}"
-    end
-
-    def asset_path(asset)
-      "#{asset_host}#{digest_asset_path(asset)}"
-    end
-
-    def image_path(image)
-      "#{asset_host}/images/#{image}"
-    end
+  def content_for(key, &block)
+    @content ||= {}
+    @content[key] = capture_haml(&block)
   end
 
+  def content(key)
+    @content && @content[key]
+  end
+
+  helpers do
+    include AssetHelpers
+  end
 end

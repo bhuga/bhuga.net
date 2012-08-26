@@ -1,12 +1,17 @@
 $.fn.pteradactyl = (opts = {}) ->
-  @div = $('#pteradactyl')
+  @div = $('<div class=pteradactyl></div>')
+  @div.css('background-image','url("<%= image_path(pteradactyl.png) %>")')
+  @div.css('position','fixed')
+  @div.css('height','150px')
+  @div.css('width','350px')
+  @div.css('z-index',10)
 
   height = @.height()
   width = @.width()
 
   @div.css('top',height + 400)
   @div.css('left',-100)
-  @div.show()
+  @.append(@div)
 
   @speed = (opts.speed || 70) # speed in milliseconds
   @offset = (opts.offset || 150) # y-axis offset per frame
