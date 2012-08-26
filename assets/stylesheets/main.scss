@@ -1,29 +1,55 @@
+@import 'variables';
+
+$brown: #8f7d69;
+$green: #c2ffc2;
+
 body {
-  background-color: #c2ffc2;
-  background-image: image_url('leather_1_op4.png');
+  @media screen and (max-width: $fixed-bp - 1) {
+    background-color: $brown;
+  }
+  @media screen and (min-width: $fixed-bp) {
+    background-color: #c2ffc2;
+    background-image: image_url('leather_1_op4.png');
+  }
 }
 
 .main-container {
-  background-image: image_url('wide-brown.png');
-  background-repeat: repeat-y;
-  width: 1060px;
+  @media screen and (min-width: $fixed-bp) {
+    width: 1060px;
+    background-image: image_url('wide-brown.png');
+    background-repeat: repeat-y;
+  }
   margin: 0 auto;
   min-height: 100%;
   #main-contained {
-    width: 920px;
+    @media screen and (min-width: $centered-bp) {
+      width: 920px;
+    }
     z-index: 5;
     position: relative;
   }
 }
 
 .sidebar {
-  width: 16.304%;
   float: right;
+  @media screen and (max-width: $wider-sidebar-bp - 1) {
+    margin-right: 2%;
+    width: 18%;
+  }
+
+  @media screen and (min-width: $wider-sidebar-bp) {
+    width: 16.304%;
+  }
 }
 
 .content {
-  width: 83.696%;
   float: left;
+  @media screen and (max-width: $wider-sidebar-bp - 1) {
+    width: 80%;
+  }
+  @media screen and (min-width: $wider-sidebar-bp) {
+    width: 83.696%;
+  }
 }
 #transparent-trex {
   position: fixed;

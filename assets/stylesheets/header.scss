@@ -1,3 +1,5 @@
+@import 'variables';
+
 header {
   text-align: center;
   nav {
@@ -16,7 +18,15 @@ header {
     }
   }
   h1 {
-    font-size: 6em;
+    @media screen and (min-width: $header-width-bp) {
+      font-size: 6em;
+    }
+    @media screen and (min-width: $header-width2-bp) and (max-width: $header-width-bp - 1) {
+      font-size: 5em;
+    }
+    @media screen and (max-width: $header-width2-bp - 1) {
+      font-size: 4em;
+    }
     margin: 0px;
     padding: 0px;
   }

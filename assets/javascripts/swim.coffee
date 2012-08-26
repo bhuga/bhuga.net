@@ -37,6 +37,7 @@ class Swimmer
     @bob(parseInt(@swimmer.css('bottom')))
     @swimmer.animate target, @options.speed, () =>
       @finished = true
+      @swimmer.remove()
 
   bob: (start) ->
     return if @finished

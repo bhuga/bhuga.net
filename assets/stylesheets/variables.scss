@@ -5,3 +5,12 @@ $light-red: lighten($red, 10);
 $lighter-red: lighten($red, 20);
 
 $yellow: #FEFEE5;
+
+// responsive breakpoints
+$fixed-bp: 1060px;
+$centered-bp: 920px;
+$wider-sidebar-bp: 935px;
+$header-width-bp: 893px;
+$header-width2-bp: 749px;
+$index-section-bp: 907px;
+
