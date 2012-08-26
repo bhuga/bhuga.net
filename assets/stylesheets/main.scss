@@ -32,11 +32,14 @@ body {
 
 .sidebar {
   float: right;
-  @media screen and (max-width: $wider-sidebar-bp - 1) {
+  @media screen and (max-width: $absolute-sidebar-bp - 1) {
+    width: 27%;
+    margin-right: 2%;
+  }
+  @media screen and (max-width: $wider-sidebar-bp - 1) and (min-width: $absolute-sidebar-bp) {
     margin-right: 2%;
     width: 18%;
   }
-
   @media screen and (min-width: $wider-sidebar-bp) {
     width: 16.304%;
   }
@@ -44,10 +47,15 @@ body {
 
 .content {
   float: left;
-  @media screen and (max-width: $wider-sidebar-bp - 1) {
+  @media screen and (max-width: $absolute-sidebar-bp - 1) {
+    width: 71%;
+  }
+  @media screen and (max-width: $wider-sidebar-bp - 1) and (min-width: $absolute-sidebar-bp) {
+    float: left;
     width: 80%;
   }
   @media screen and (min-width: $wider-sidebar-bp) {
+    float: left;
     width: 83.696%;
   }
 }
