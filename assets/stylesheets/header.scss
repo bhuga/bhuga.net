@@ -37,8 +37,11 @@ header {
     @media screen and (max-width: $header-width2-bp - 1) and (min-width: $exploding-dinosaur-bp) {
       font-size: 4em;
     }
-    @media screen and (max-width: $exploding-dinosaur-bp - 1) {
+    @media screen and (max-width: $exploding-dinosaur-bp - 1) and (min-width: $header-width3-bp) {
       font-size: 3em;
+    }
+    @media screen and (max-width: $header-width3-bp - 1) {
+      font-size: 2.5em;
     }
     margin: 0px;
     padding: 0px;

@@ -60,9 +60,14 @@ body {
   }
 }
 #transparent-trex {
+  @media screen and (min-width: $trex-resize-bp) {
+    height: 600px;
+    width: 600px;
+  }
+  @media screen and (max-width: $trex-resize-bp - 1) {
+    width: 100%;
+  }
   position: fixed;
-  height: 600px;
-  width: 600px;
   top: 0px;
   left: 0px;
   z-index: 3;
@@ -91,4 +96,9 @@ body {
   width: 350px;
   z-index: 10;
   display: none;
+}
+.rss {
+  @media screen and (max-width: $rss-cutoff-bp) {
+    display: none;
+  }
 }

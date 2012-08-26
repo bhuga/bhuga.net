@@ -1,6 +1,10 @@
+@import 'variables';
+
 footer {
+  @media screen and (min-width: $trex-resize-bp) {
+    width: 80%;
+  }
   text-align: center;
-  width: 80%;
   font-size: 0.8em;
   padding: 0px 50px 0px 50px;
   p {
