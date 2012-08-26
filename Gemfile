@@ -9,6 +9,7 @@ gem 'builder'
 gem 'rake',           '0.9.2'
 gem 'sprockets'
 gem 'thin'
+gem 'rack-cache'
 
 group :production do
   #gem 'therubyracer'
