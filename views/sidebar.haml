@@ -2,7 +2,7 @@
   %h1 Who made this awesome site?
   #profile-pic
     .frame
-      %img{:src => '/images/camel.jpg', :alt => 'Ben and a Camel'}
+      %img{:src => image_path('camel.jpg'), :alt => 'Ben and a Camel'}
     %span.caption
       Camels smell freaking terrible but I'm no hater.
   .callout
@@ -16,14 +16,14 @@
     **get dramatic** about his choice of **stylistic dogma.**
 
   %a{:href => 'http://github.com/bhuga'}
-    %img{:src => '/images/octocat.png'}
+    %img{:src => image_path('octocat.png')}
 %article.twitter
   :markdown
     You can follow Ben on **Twitter,** where you can hear him **complain** about
     products and services that he will usually **purchase anyway.**
 
   %a{:href => 'http://twitter.com/bhuga'}
-    %img{:src => '/images/twitter-bird.png'}
+    %img{:src => image_path('twitter-bird.png')}
 %article.facebook
   :markdown
     Ben is on **Facebook,** and feel free to contact him there if your
@@ -31,4 +31,4 @@
     the **Marigny,** or the **Bywater.**
 
   %a{:href => 'http://facebook.com/blavender'}
-    %img{:src => '/images/f_logo_transparent.png'}
+    %img{:src => image_path('f_logo_transparent.png')}

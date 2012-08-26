@@ -4,7 +4,7 @@
       %h2
         %a{:href => '/blog'} Wrote
       %a{:href => '/feed'}
-        %img{:src => '/images/trex-rss.png' }
+        %img{:src => image_path('trex-rss.png') }
     %ul
       - @blog_posts.each do |post|
         %li.index-post
@@ -15,7 +15,7 @@
       %h2
         %a{:href => '/books'} Read
       %a{:href => '/books-feed'}
-        %img{:src => '/images/trex-rss.png'}
+        %img{:src => image_path('trex-rss.png')}
     %ul
       - @book_reviews.each do |post|
         %li.index-post

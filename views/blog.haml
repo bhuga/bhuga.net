@@ -2,7 +2,7 @@
   %h2
     Blog Posts
     %a{:href => '/feed'}
-      %img{:src => '/images/trex-rss.png' }
+      %img{:src => image_path('trex-rss.png') }
   %ul
     - @posts.each do |post|
       %li.index-post
