@@ -5,12 +5,13 @@ require 'bundler'
 Bundler.setup
 require 'sprockets'
 
+require 'bhuga'
 map '/assets' do
-  environment = Sprockets::Environment.new
-  environment.append_path 'assets/javascripts'
-  environment.append_path 'assets/stylesheets'
-  run environment
+  sprockets = Sprockets::Environment.new
+  sprockets.append_path 'assets/javascripts'
+  sprockets.append_path 'assets/stylesheets'
+  Bhuga.set :sprockets, sprockets
+  run sprockets
 end
 
-require 'bhuga'
 run Bhuga
