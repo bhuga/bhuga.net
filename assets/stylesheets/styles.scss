@@ -24,22 +24,6 @@
   }
 }
 
-.right-triangle {
-  right: -85px;
-  top: 40px;
-  position: absolute;
-  border-left: 85px solid #FEFEE5;
-  border-top: 34px solid transparent;
-  z-index: 7;
-}
-.right-triangle-border {
-  right: -107px;
-  top: 34px;
-  border-left: 106px solid #600;
-  border-top: 45px solid transparent;
-  position: absolute;
-  z-index: 6;
-}
 .left {
   float: left;
 }

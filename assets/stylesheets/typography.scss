@@ -19,7 +19,10 @@ h1,h2,h3,h4,h5,h6,.dinosaur {
 }
 h2 {
   /* it's just wrong for headers to be bigger than the BHUGA WOOGA */
-  @media screen and (max-width: $header-width2-bp - 1) {
+  @media screen and (max-width: $exploding-dinosaur-bp - 1) {
+    font-size: 2em;
+  }
+  @media screen and (max-width: $header-width2-bp - 1) and (min-width: $exploding-dinosaur-bp) {
     font-size: 3em;
   }
   @media screen and (min-width: $header-width2-bp) {
