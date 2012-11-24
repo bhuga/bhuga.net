@@ -22,7 +22,7 @@ class Post
   end
 
   def self.all
-    Dir.glob(self.directory + '/*.md').map { |file| self.new(file) }.sort.reverse
+    Dir.glob(self.directory + '/*.md').map { |file| self.new(file) }.reject {|p| p.skip }.sort.reverse
   end
 
   def title
@@ -46,7 +46,7 @@ class Post
   end
 
   def method_missing(method, *args)
-    meta.has_key?(method) ? meta[method] : super
+    meta.has_key?(method) ? meta[method] : nil
   end
 
   def created

@@ -5,7 +5,14 @@
 :format_id: 4
 :format: Markdown
 :slug: xhr-uploading-directly-to-s3-with-a-ruby-backend
+:skip: true
 ---
+
+## GUYS I KNOW THIS IS OBSOLETE STOP POSTING COMMENTS
+
+Go rock the CORS stuff. Keep googling.
+
+For the historic record:
 
 I just spent a couple of days on a journey of discovery regarding uploading
 files directly to S3. It's pretty straightforward unless you don't want to

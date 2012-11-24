@@ -22,6 +22,7 @@ class Bhuga < Sinatra::Application
           xml.description 'Blog Posts'
           xml.link 'http://bhuga.net'
           posts.each do |post|
+            next if post.skip
             xml.item do
               url = ENV['BASE_HOST'] + '/' + post.slug
               xml.title post.title
