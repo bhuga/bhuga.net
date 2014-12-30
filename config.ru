@@ -8,8 +8,6 @@ require 'sprockets'
 require 'asset_helpers'
 require 'sass-extensions'
 require 'bhuga'
-require "pry"
-
 
 use Rack::Cors do
   allow do
