@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem 'sinatra',        '1.2.6'
 gem 'haml',           '3.1.2'
 gem 'rdiscount'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'sass',           '3.2.1'
 gem 'coffee-script',  '2.2.0'
 gem 'builder'
@@ -18,4 +19,5 @@ end
 group :development do
   gem 'shotgun'
   gem 'heroku'
+  gem "pry"
 end
