@@ -20,7 +20,7 @@
       You see the
       %a{:href => 'https://github.com/bhuga'} Github link?
       %br
-      You see the 
+      You see the
       %a{ :href => "/about"} about page,
       where he says he likes
       %span.dinosaur VIM?
@@ -49,31 +49,22 @@
     %li.like.good CSS
     %li.like.good CoffeeScript
     %li.like.good JavaScript (coffee way preferred)
-    %li.good Routers
-    %li.good Switches
-    %li.good Spec Hardware
     %li.like.good backbone.js
-    %li Spreadsheets
     %li.good PHP
     %li.good Drupal
-    %li Rack servers
     %li.like AWS
     %li.like.good Dat 'full stack'
     %li SQL, My and postgre
     %li.like Perl
-    %li Java
     %li.good Customer Support
-    %li Fundraising
     %li.good Linux configuration
     %li.like.good Open Source
     %li.good The kind of bloated enterprise software nobody should ever buy
     %li.like.good Type out old-school protocols in telnet to figure out some problem
     %li.like.good Self-manage projects from user interviews to deployment and delivery
-    %li.like.good Above-average git
-    %li.good Responding to security incidents
-    %li Virtualization
+    %li.like.good git
     %li Test automation
-    %li.like HAML
+    %li.good HAML
     %li.like SASS
     %li.like.good Interview applicants
     %li.like.good Speak German
@@ -96,19 +87,28 @@
             %a{:href => "http://github.com"} GitHub
           %br
           .description
-            Internal tools and deployment
+            Development on GitHub.com and internal tools for deployment, CI, and monitoring.
 
           %h5 Notables
           %ul
+            %li
+              Rescued three all-but-abandoned projects, bringing them to modern standards.
             %li
               Created a method for configuring application environment
               variables for every app in the company from chat.
             %li
               Improved and maintained the company's continuous deployment
-              automation infrastructure.
+              automation infrastructure, a system layered over jenkins.
             %li
               As part of a team, implemented a production-quality real time
               messaging system.
+            %li
+              Implemented platform features related to commit statuses and
+              rate limiting.
+            %li
+              As part of a team, revitalized monitoring by extracting and refactoring
+              a deployable nagios configuration to live as a stand-alone software
+              project, based heavily on graphite metrics.
       %li
         %h4 Chief Nerd
         .history
@@ -272,7 +272,7 @@
 
           %h5 Notables
           %ul
-            %li 
+            %li
               Was primarily responsible for the design, implementation, and
               maintenance of a DNS system to replace an aging system. Included 11
               name servers, including both client caching and authoritative, with
@@ -307,6 +307,3 @@
       %li Graduated in Austria remotely (thx Katrina!)
       %li Learned me a Prolog
       %li Made lego robots run into walls intelligently
-
-
-
