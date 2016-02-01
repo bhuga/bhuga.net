@@ -1,3 +1,4 @@
+require 'open-uri'
 require 'haml'
 require 'sinatra'
 require 'coffee-script'
@@ -60,6 +61,12 @@ class Bhuga < Sinatra::Application
 
   get '/books-rss.xml' do
     call env.merge("PATH_INFO" => '/books-feed')
+  end
+
+  get '/bad-unfurl-test' do
+    uri = URI.parse("https://twitter.com/bhuga")
+    text = uri.read
+    [200, {}, text]
   end
 
   # keep publishing at some legacy drupal URLs, too.
