@@ -1,6 +1,8 @@
 name: BHUGA WOOGA
 markdown: kramdown
 permalink: :title
+sass:
+  sass_dir: assets/stylesheets
 collections:
   book_reviews:
     output: true
@@ -16,6 +18,5 @@ exclude:
   - .gitignore
   - .bundle
   - .ruby-version
-  - assets
-  - css
   - views
+  - vendor

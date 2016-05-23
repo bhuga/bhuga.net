@@ -1,12 +1,12 @@
-/*
-*= require ./html5normalize
-*= require ./typography
-*= require ./styles
-*= require ./main
-*= require ./header
-*= require ./footer
-*= require ./sidebar
-*= require ./index
-*= require ./cv
-*= require ./about
-*/
+---
+---
+{% include_relative html5normalize.css %}
+@import "typography";
+@import "styles";
+@import "main";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "index";
+@import "cv";
+@import "about";
