@@ -1,0 +1,44 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+<div id="index">
+  <section class="blogs">
+    <div class="text-centered">
+      <h2>
+        <a href="/blog">Wrote</a>
+      </h2>
+      <a href="/feed">
+        <img class="rss" src="/public/images/trex-rss.png"/>
+      </a>
+    </div>
+    <ul>
+      {% for post in site.posts %}
+          <li class="index-post">
+            <div id="post-title">
+              <a href="/{{ post.url }}">{{ post.title }}</a>
+            </div>
+          </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="reviews">
+    <div class="text-centered">
+      <h2>
+        <a href="/books">Read</a>
+      </h2>
+      <a href="/books-feed">
+        <img class="rss" src="/public/images/trex-rss.png"/>
+      </a>
+    </div>
+    <ul>
+      {% for post in site.book_reviews %}
+        <li class="index-post">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="author">by #{post.author}</span>
+        </li>
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
