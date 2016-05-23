@@ -1,3 +1,21 @@
 name: BHUGA WOOGA
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+permalink: :title
+collections:
+  book_reviews:
+    output: true
+    permalink: :title
+exclude:
+  - config.ru
+  - book_reviews
+  - blog_posts
+  - Gemfile
+  - Gemfile.lock
+  - lib
+  - bin
+  - .gitignore
+  - .bundle
+  - .ruby-version
+  - assets
+  - css
+  - views
