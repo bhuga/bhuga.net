@@ -9,14 +9,14 @@ body {
   }
   @media screen and (min-width: $fixed-bp) {
     background-color: #c2ffc2;
-    background-image: url('/public/images/leather_1_op4.png');
+    background-image: url('/images/leather_1_op4.png');
   }
 }
 
 .main-container {
   @media screen and (min-width: $fixed-bp) {
     width: 1060px;
-    background-image: url('/public/images/wide-brown.png');
+    background-image: url('/images/wide-brown.png');
     background-repeat: repeat-y;
   }
   margin: 0 auto;

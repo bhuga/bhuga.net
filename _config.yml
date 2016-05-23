@@ -1,4 +1,5 @@
 name: BHUGA WOOGA
+gems: [jekyll-coffeescript]
 markdown: kramdown
 permalink: :title
 sass:

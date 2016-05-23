@@ -34,7 +34,7 @@ $ ->
     audioSupported = true
 
   if audioSupported
-    raptorAudio = $('<audio id="elRaptorShriek" preload="auto"><source src="/raptor-sound.mp3" /><source src="/raptor-sound.ogg" /></audio>')
+    raptorAudio = $('<audio id="elRaptorShriek" preload="auto"><source src="/sounds/raptor-sound.mp3" /><source src="/sounds/raptor-sound.ogg" /></audio>')
     $('body').append(raptorAudio)
 
   # swimming plesiosaur
