@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'github-pages'
 gem 'sinatra',        '1.2.6'
 gem 'haml',           '3.1.2'
 gem 'rdiscount'
